@@ -21,7 +21,7 @@ The site uses a retro pixel cybersecurity and GRC operating-system theme:
 - Animated metric counters in pixel display typography
 - About, Skills, Cyber Risk Problems, Experience, Works (Projects), Case Files, GRC Lab, Frameworks, Artifacts, Contact sections
 - Centralized content in `src/data/portfolioData.js`
-- SEO metadata, Open Graph tags, Twitter card tags, favicon placeholder, and JSON-LD structured data
+- SEO metadata, Open Graph tags, Twitter card tags, favicon.io favicon set, and JSON-LD structured data
 
 ## Local Setup
 
