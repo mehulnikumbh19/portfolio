@@ -48,19 +48,21 @@ function GrcConsole() {
   );
 }
 
+const avatarSrc = `${import.meta.env.BASE_URL}avatar.jpg`;
+
 export default function Hero() {
   return (
     <section id="home" className="site-shell pb-16 pt-2 sm:pt-4">
-      <div className="grid gap-6 lg:grid-cols-[1fr_1.6fr]">
+      <div className="mx-auto grid w-full max-w-5xl gap-8 lg:grid-cols-2 lg:gap-10">
 
         {/* Left col — photo */}
         <motion.div
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: [0.5, 0, 0.5, 1] }}
-          className="flex flex-col gap-6"
+          className="flex w-full flex-col"
         >
-          <div className="retro-card overflow-hidden p-0">
+          <div className="retro-card w-full overflow-hidden p-0">
             <div className="titlebar">
               <span>profile.exe</span>
               <span className="titlebar-dots" aria-hidden="true">
@@ -71,7 +73,7 @@ export default function Hero() {
             </div>
             <div className="halftone relative">
               <img
-                src="/portfolio/avatar.jpg"
+                src={avatarSrc}
                 alt="Mehul Nikumbh"
                 className="w-full object-cover"
                 style={{ maxHeight: "480px", filter: "contrast(1.05) saturate(0.9)" }}
@@ -89,7 +91,7 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08 } } }}
-          className="flex flex-col gap-6"
+          className="flex w-full flex-col gap-6"
         >
           <motion.div variants={fadeUp} transition={{ duration: 0.4, ease: [0.5, 0, 0.5, 1] }}>
             <RetroCard tone="paper" hover={false} className="p-5 sm:p-7">
