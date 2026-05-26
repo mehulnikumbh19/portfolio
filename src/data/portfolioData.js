@@ -36,7 +36,7 @@ export const profile = {
     "Available for GRC, IT Risk, Security Compliance, IT Audit, and Information Security roles.",
   email: "mnikumbh19@gmail.com",
   location: "United States",
-  linkedin: "https://www.linkedin.com/in/mehulnikumbh19",
+  linkedin: "https://www.linkedin.com/in/mehulnikumbh/",
   github: "https://github.com/mehulnikumbh19",
   resume: "/Mehul_Nikumbh_Resume.pdf",
   grcPortfolio: "/Mehul_Nikumbh_GRC_Portfolio.pdf",
