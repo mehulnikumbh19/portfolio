@@ -4,23 +4,22 @@ Static, deploy-ready personal portfolio built with React 18, Vite, Tailwind CSS,
 
 ## Design Direction
 
-The site uses a dark cybersecurity and GRC control-room theme:
+The site uses a retro pixel cybersecurity and GRC operating-system theme:
 
-- Deep black, navy, and slate background system
-- Cyan, blue, green, and restrained purple accents
-- Animated grid background and cyber lines
-- Dark glass-style cards with controlled hover glow
-- Sans-first typography with mono labels and metadata
-- Framer Motion section reveals, staggered cards, and sub-300ms UI transitions
-- Reduced-motion support and accessible focus states
+- Orange halftone outer background with cream and paper canvas panels
+- Thick 3px black borders and hard offset shadows (`6px 6px 0 #050505`)
+- Press Start 2P for large pixel display, VT323 for retro labels, Space Grotesk for body
+- Pixel profile card header, dark status strip, orange status dot
+- Black skills panel, retro cartridge artifact cards, CSS-only project preview tiles (access matrix, control map, vulnerability heatmap, SIEM feed)
+- Snappy Framer Motion section reveals (~160ms, custom retro easing), tactile button press (`translate(4px,4px)` to flatten shadow)
+- Respects `prefers-reduced-motion` and uses visible focus outlines
 
 ## Features
 
-- Sticky responsive navbar with mobile menu and ESC close support
-- Strong hero section with terminal-style GRC control panel
-- Animated metric counters
-- Recruiter snapshot cards
-- About, problems solved, workflow, skills, experience, projects, case studies, GRC Lab, frameworks, artifacts, education, learning, FAQ, contact, and footer sections
+- Pixel UI navbar with mobile menu sheet, ESC and click-outside to close
+- Hero with identity card, black skills matrix, and GRC console mini-window
+- Animated metric counters in pixel display typography
+- About, Skills, Cyber Risk Problems, Experience, Works (Projects), Case Files, GRC Lab, Frameworks, Artifacts, Contact sections
 - Centralized content in `src/data/portfolioData.js`
 - SEO metadata, Open Graph tags, Twitter card tags, favicon placeholder, and JSON-LD structured data
 

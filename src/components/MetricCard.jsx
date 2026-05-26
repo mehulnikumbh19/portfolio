@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
-import { expo } from "./GlassCard";
+import { useInView } from "framer-motion";
+import RetroCard from "./RetroCard";
 
 function AnimatedNumber({ value, suffix = "" }) {
   const ref = useRef(null);
@@ -8,9 +8,9 @@ function AnimatedNumber({ value, suffix = "" }) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    if (!inView) return undefined;
+    if (!inView) return;
     let frame;
-    const duration = 1000;
+    const duration = 900;
     const start = performance.now();
 
     const tick = (now) => {
@@ -32,32 +32,21 @@ function AnimatedNumber({ value, suffix = "" }) {
   );
 }
 
-export default function MetricCard({ metric, compact = false, delay = 0 }) {
+export default function MetricCard({ metric, delay = 0 }) {
   const Icon = metric.icon;
-
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 14 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.4 }}
-      transition={{ duration: 0.5, delay, ease: expo }}
-      className={`group rounded-2xl border border-white/10 bg-slate-900/72 transition duration-200 ease-out-expo hover:-translate-y-1 hover:border-cyan-300/35 hover:shadow-cyber ${
-        compact ? "p-4" : "p-5"
-      }`}
-    >
-      <div className="flex items-start justify-between gap-4">
-        <div>
-          <p className={`${compact ? "text-2xl" : "text-3xl"} font-extrabold text-white`}>
-            <AnimatedNumber value={metric.value} suffix={metric.suffix} />
-          </p>
-          <p className="mt-2 text-sm leading-5 text-slate-300">{metric.label}</p>
-        </div>
+    <RetroCard delay={delay} className="p-5 sm:p-6" tone="paper" hover>
+      <div className="flex items-start justify-between gap-3">
+        <p className="pixel-heading text-[clamp(2rem,4.5vw,3rem)] text-ink">
+          <AnimatedNumber value={metric.value} suffix={metric.suffix} />
+        </p>
         {Icon ? (
-          <span className="grid h-10 w-10 place-items-center rounded-xl border border-cyan-300/22 bg-cyan-300/10 text-cyan-200 transition group-hover:border-cyan-300/50">
+          <span className="grid h-9 w-9 place-items-center border-2 border-ink bg-orange text-ink">
             <Icon className="h-4 w-4" aria-hidden="true" />
           </span>
         ) : null}
       </div>
-    </motion.div>
+      <p className="pixel-label mt-3 text-brown">{metric.label}</p>
+    </RetroCard>
   );
 }

@@ -4,24 +4,43 @@ import { profile } from "../data/portfolioData";
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="border-t border-white/10 bg-slate-950/70">
-      <div className="mx-auto flex max-w-content flex-col gap-6 px-4 py-10 sm:px-6 md:flex-row md:items-center md:justify-between">
-        <div>
-          <p className="font-semibold text-slate-100">Built with React, Tailwind CSS, Framer Motion</p>
-          <p className="mt-2 text-sm text-slate-400">Designed for GRC, IT Risk, and Security Compliance opportunities</p>
-          <p className="mt-2 font-mono text-xs text-slate-500">Copyright {year} Mehul Nikumbh</p>
+    <footer className="site-shell pb-8 pt-4">
+      <div className="retro-card bg-ink p-4 text-paper sm:p-5">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <p className="pixel-label text-orange">
+            Designed and built for GRC, IT Risk, and Security Compliance opportunities.
+          </p>
+          <div className="flex items-center gap-2">
+            <a
+              href={profile.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+              className="grid h-9 w-9 place-items-center border-2 border-orange bg-ink text-orange transition-colors duration-150 ease-retro hover:bg-orange hover:text-ink"
+            >
+              <Linkedin className="h-4 w-4" aria-hidden="true" />
+            </a>
+            <a
+              href={profile.github}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+              className="grid h-9 w-9 place-items-center border-2 border-orange bg-ink text-orange transition-colors duration-150 ease-retro hover:bg-orange hover:text-ink"
+            >
+              <Github className="h-4 w-4" aria-hidden="true" />
+            </a>
+            <a
+              href={`mailto:${profile.email}`}
+              aria-label="Email"
+              className="grid h-9 w-9 place-items-center border-2 border-orange bg-ink text-orange transition-colors duration-150 ease-retro hover:bg-orange hover:text-ink"
+            >
+              <Mail className="h-4 w-4" aria-hidden="true" />
+            </a>
+          </div>
         </div>
-        <div className="flex gap-3">
-          <a className="icon-link" href={profile.linkedin} aria-label="LinkedIn" target="_blank" rel="noreferrer">
-            <Linkedin className="h-5 w-5" aria-hidden="true" />
-          </a>
-          <a className="icon-link" href={profile.github} aria-label="GitHub" target="_blank" rel="noreferrer">
-            <Github className="h-5 w-5" aria-hidden="true" />
-          </a>
-          <a className="icon-link" href={`mailto:${profile.email}`} aria-label="Email">
-            <Mail className="h-5 w-5" aria-hidden="true" />
-          </a>
-        </div>
+        <p className="pixel-label mt-4 text-paper/70">
+          Mehul Nikumbh . Issue 01 . {year}
+        </p>
       </div>
     </footer>
   );

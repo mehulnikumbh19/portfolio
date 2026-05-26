@@ -2,7 +2,6 @@ import {
   AlertTriangle,
   BarChart3,
   BookOpen,
-  BriefcaseBusiness,
   ClipboardCheck,
   Database,
   FileCheck2,
@@ -27,11 +26,14 @@ import {
 
 export const profile = {
   name: "Mehul Nikumbh",
-  headline: "Cybersecurity GRC • IT Risk • Security Compliance • Audit Readiness",
-  subheadline:
-    "M.S. Information Systems, Cybersecurity Concentration @ California State University, Long Beach",
+  role: "Cybersecurity GRC • IT Risk • Security Compliance",
+  heroHeadline: "Cybersecurity evidence turned into audit-ready risk decisions.",
   summary:
     "I build practical cybersecurity and GRC workflows that turn technical security evidence into risk-based decisions. My work focuses on control assessments, audit evidence tracking, vulnerability risk prioritization, IAM governance, remediation reporting, and security compliance documentation.",
+  education:
+    "M.S. Information Systems, Cybersecurity Concentration @ California State University, Long Beach",
+  availability:
+    "Available for GRC, IT Risk, Security Compliance, IT Audit, and Information Security roles.",
   email: "mnikumbh19@gmail.com",
   location: "United States",
   linkedin: "https://www.linkedin.com/in/mehulnikumbh19",
@@ -40,6 +42,15 @@ export const profile = {
   grcPortfolio: "/Mehul_Nikumbh_GRC_Portfolio.pdf",
   accessGuardGuide: "/AccessGuard_Project_Guide.pdf"
 };
+
+export const heroSkills = [
+  "Control Testing",
+  "Risk Assessment",
+  "Audit Readiness",
+  "IAM Governance",
+  "Vulnerability Risk",
+  "Evidence Tracking"
+];
 
 export const navLinks = [
   { label: "Home", href: "#home" },
@@ -336,9 +347,7 @@ export const metrics = [
   { label: "SIEM Alerts Processed", value: 500, suffix: "+", icon: Radar },
   { label: "Evidence Gaps Identified", value: 28, suffix: "", icon: FileCheck2 },
   { label: "Assets Reviewed", value: 150, suffix: "", icon: Database },
-  { label: "Control Families Assessed", value: 5, suffix: "", icon: Layers3 },
-  { label: "Excel Workbook Tabs Built", value: 13, suffix: "", icon: FileSpreadsheet },
-  { label: "GRC Projects Developed", value: 4, suffix: "", icon: BriefcaseBusiness }
+  { label: "Control Families Assessed", value: 5, suffix: "", icon: Layers3 }
 ];
 
 export const projects = [
@@ -930,11 +939,4 @@ export const sectionKickers = {
   skills: "Governance depth with technical security context",
   projects: "Portfolio simulations using realistic enterprise workflows",
   lab: "Compact previews of the tools and thinking behind the work"
-};
-
-export const riskStyles = {
-  low: "border-emerald-400/30 bg-emerald-400/[0.12] text-emerald-100",
-  medium: "border-amber-300/35 bg-amber-300/[0.14] text-amber-100",
-  high: "border-orange-400/40 bg-orange-400/[0.16] text-orange-100",
-  critical: "border-rose-400/45 bg-rose-500/[0.20] text-rose-100"
 };

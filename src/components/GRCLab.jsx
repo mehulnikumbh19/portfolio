@@ -1,89 +1,127 @@
-import { CheckCircle2, TableProperties } from "lucide-react";
-import Badge from "./Badge";
-import GlassCard from "./GlassCard";
-import SectionHeading from "./SectionHeading";
+import RetroCard from "./RetroCard";
+import SectionTitle from "./SectionTitle";
 import {
   accessReviewTests,
   evidenceChecklist,
   remediationColumns,
-  riskMatrix,
-  riskStyles,
-  sectionKickers
+  riskMatrix
 } from "../data/portfolioData";
 
 const impactLabels = ["Very High", "High", "Medium", "Low", "Very Low"];
 const likelihoodLabels = ["Very Low", "Low", "Medium", "High", "Very High"];
 
+const levelStyles = {
+  low: "bg-success text-ink",
+  medium: "bg-warn text-ink",
+  high: "bg-orange text-ink",
+  critical: "bg-risk text-paper"
+};
+
 const remediationRows = [
-  { finding: "Expired exception", risk: "High", owner: "IAM", due: "May 30", status: "In review" },
-  { finding: "Missing evidence", risk: "Medium", owner: "App owner", due: "Jun 07", status: "Assigned" },
-  { finding: "Overdue patch", risk: "High", owner: "Infra", due: "Jun 14", status: "Open" }
+  { finding: "Expired exception", risk: "High", owner: "IAM Team", due: "May 30", status: "In review" },
+  { finding: "Missing evidence", risk: "Med", owner: "App owner", due: "Jun 07", status: "Assigned" },
+  { finding: "Overdue patch", risk: "High", owner: "Infra", due: "Jun 14", status: "Open" },
+  { finding: "Orphan account", risk: "Med", owner: "IAM Team", due: "Jun 21", status: "Open" }
 ];
 
 export default function GRCLab() {
   return (
-    <section id="grc-lab" className="section-shell">
-      <SectionHeading eyebrow="GRC Lab" title="Cyber control-room previews" description={sectionKickers.lab} />
+    <section id="grc-lab" className="site-shell py-14 sm:py-20">
+      <SectionTitle
+        kicker="Control room"
+        title="GRC Lab"
+        description="Previews of the tools and thinking behind the work."
+      />
 
       <div className="grid gap-5 xl:grid-cols-2">
-        <GlassCard className="p-5">
-          <p className="eyebrow mb-3">Lab 01</p>
-          <h3 className="display-3">Risk Matrix Preview</h3>
-          <div className="mt-5 grid grid-cols-5 gap-2">
-            {riskMatrix.flatMap((row, rowIndex) =>
-              row.map((level, colIndex) => (
-                <div
-                  key={`${rowIndex}-${colIndex}`}
-                  role="img"
-                  aria-label={`Impact ${impactLabels[rowIndex]}, Likelihood ${likelihoodLabels[colIndex]}: ${level}`}
-                  className={`aspect-square rounded-xl border text-[10px] font-bold uppercase sm:text-xs ${riskStyles[level]}`}
-                >
-                  <span className="flex h-full items-center justify-center">{level}</span>
-                </div>
-              ))
-            )}
+        <RetroCard tone="paper" className="p-0">
+          <div className="titlebar">
+            <span>risk.matrix</span>
+            <span className="pixel-label">5 x 5</span>
           </div>
-        </GlassCard>
-
-        <GlassCard className="p-5">
-          <p className="eyebrow mb-3">Lab 02</p>
-          <h3 className="display-3">Audit Evidence Checklist</h3>
-          <div className="mt-5 grid gap-3 sm:grid-cols-2">
-            {evidenceChecklist.map((item) => (
-              <div key={item} className="flex items-center gap-3 rounded-xl border border-white/10 bg-black/[0.24] px-3 py-2.5 text-sm text-slate-200">
-                <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-300" aria-hidden="true" />
-                {item}
-              </div>
-            ))}
-          </div>
-        </GlassCard>
-
-        <GlassCard className="p-5">
-          <p className="eyebrow mb-3">Lab 03</p>
-          <h3 className="display-3">Access Review Test Types</h3>
-          <div className="mt-5 flex flex-wrap gap-2.5">
-            {accessReviewTests.map((test, index) => (
-              <Badge key={test} tone={index % 2 === 0 ? "accent" : "default"}>
-                {test}
-              </Badge>
-            ))}
-          </div>
-        </GlassCard>
-
-        <GlassCard className="p-5">
-          <div className="mb-4 flex items-center gap-3">
-            <TableProperties className="h-5 w-5 text-cyan-200" aria-hidden="true" />
-            <div>
-              <p className="eyebrow">Lab 04</p>
-              <h3 className="display-3 mt-1">Remediation Tracker Preview</h3>
+          <div className="p-5 sm:p-6">
+            <p className="pixel-label text-rust">Risk Matrix Preview</p>
+            <h3 className="pixel-heading mt-2 text-[1.5rem] text-ink">Impact . Likelihood</h3>
+            <div className="mt-4 grid grid-cols-5 gap-1.5">
+              {riskMatrix.flatMap((row, rowIdx) =>
+                row.map((level, colIdx) => (
+                  <div
+                    key={`${rowIdx}-${colIdx}`}
+                    role="img"
+                    aria-label={`Impact ${impactLabels[rowIdx]}, Likelihood ${likelihoodLabels[colIdx]}: ${level}`}
+                    className={`pixel-label aspect-square border-2 border-ink ${levelStyles[level]} flex items-center justify-center`}
+                  >
+                    {level}
+                  </div>
+                ))
+              )}
             </div>
           </div>
-          <div className="-mx-5 overflow-x-auto px-5">
-            <table className="min-w-full text-left text-sm">
+        </RetroCard>
+
+        <RetroCard tone="cream" className="p-0">
+          <div className="titlebar">
+            <span>evidence.checklist</span>
+            <span className="pixel-label">{evidenceChecklist.length} items</span>
+          </div>
+          <div className="p-5 sm:p-6">
+            <p className="pixel-label text-rust">Audit Evidence Checklist</p>
+            <h3 className="pixel-heading mt-2 text-[1.5rem] text-ink">Required Columns</h3>
+            <ol className="mt-4 grid gap-2 sm:grid-cols-2">
+              {evidenceChecklist.map((item, idx) => (
+                <li
+                  key={item}
+                  className="flex items-center gap-2.5 border-2 border-ink bg-paper px-3 py-2"
+                >
+                  <span className="pixel-label bg-orange px-1.5 py-0.5 text-ink">
+                    {String(idx + 1).padStart(2, "0")}
+                  </span>
+                  <span className="text-[0.93rem] text-brown">{item}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </RetroCard>
+
+        <RetroCard tone="dark" className="p-0">
+          <div className="titlebar bg-orange text-ink">
+            <span>access.tests</span>
+            <span className="pixel-label">6 types</span>
+          </div>
+          <div className="p-5 sm:p-6">
+            <p className="pixel-label text-orange">Access Review Test Types</p>
+            <h3 className="pixel-heading mt-2 text-[1.5rem] text-paper">
+              Catches recurring exceptions
+            </h3>
+            <ul className="mt-4 flex flex-wrap gap-2">
+              {accessReviewTests.map((test) => (
+                <li
+                  key={test}
+                  className="pill-retro border-orange bg-coal text-orange"
+                >
+                  {test}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </RetroCard>
+
+        <RetroCard tone="paper" className="p-0">
+          <div className="titlebar">
+            <span>remediation.tracker</span>
+            <span className="pixel-label">{remediationRows.length} rows</span>
+          </div>
+          <div className="overflow-x-auto p-5 sm:p-6">
+            <p className="pixel-label text-rust">Remediation Tracker Preview</p>
+            <h3 className="pixel-heading mt-2 text-[1.5rem] text-ink">Finding to Closure</h3>
+            <table className="mt-4 w-full min-w-[480px] border-collapse text-left">
               <thead>
                 <tr>
                   {remediationColumns.slice(0, 5).map((column) => (
-                    <th key={column} className="border-y border-white/10 px-3 py-3 font-mono text-xs font-semibold uppercase tracking-label text-cyan-100">
+                    <th
+                      key={column}
+                      className="pixel-label border-2 border-ink bg-cream px-2.5 py-2 text-ink"
+                    >
                       {column}
                     </th>
                   ))}
@@ -91,18 +129,28 @@ export default function GRCLab() {
               </thead>
               <tbody>
                 {remediationRows.map((row) => (
-                  <tr key={row.finding} className="border-b border-white/10 text-slate-300">
-                    <td className="px-3 py-3">{row.finding}</td>
-                    <td className="px-3 py-3 text-amber-100">{row.risk}</td>
-                    <td className="px-3 py-3">{row.owner}</td>
-                    <td className="px-3 py-3">{row.due}</td>
-                    <td className="px-3 py-3 text-cyan-100">{row.status}</td>
+                  <tr key={row.finding}>
+                    <td className="border-2 border-ink bg-paper px-2.5 py-2 text-[0.9rem] text-ink">
+                      {row.finding}
+                    </td>
+                    <td className="border-2 border-ink bg-paper px-2.5 py-2 text-[0.9rem] font-semibold text-risk">
+                      {row.risk}
+                    </td>
+                    <td className="border-2 border-ink bg-paper px-2.5 py-2 text-[0.9rem] text-brown">
+                      {row.owner}
+                    </td>
+                    <td className="border-2 border-ink bg-paper px-2.5 py-2 text-[0.9rem] text-brown">
+                      {row.due}
+                    </td>
+                    <td className="border-2 border-ink bg-paper px-2.5 py-2 text-[0.9rem] text-brown">
+                      {row.status}
+                    </td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-        </GlassCard>
+        </RetroCard>
       </div>
     </section>
   );

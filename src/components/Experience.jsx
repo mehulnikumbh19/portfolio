@@ -1,20 +1,21 @@
 import ExperienceCard from "./ExperienceCard";
-import SectionHeading from "./SectionHeading";
+import SectionTitle from "./SectionTitle";
 import { experience } from "../data/portfolioData";
 
 export default function Experience() {
   return (
-    <section id="experience" className="section-shell">
-      <SectionHeading
-        eyebrow="Experience"
-        title="Security work with evidence, controls, and remediation context"
-        description="A timeline of information security, security operations, and GRC-aligned responsibilities."
+    <section id="experience" className="site-shell py-14 sm:py-20">
+      <SectionTitle
+        kicker="Resume"
+        title="Experience"
+        description="Security operations roots paired with control testing, evidence, and risk reporting work."
       />
-      <div className="relative space-y-6 before:absolute before:left-[19px] before:top-8 before:h-[calc(100%-3rem)] before:w-px before:bg-gradient-to-b before:from-cyan-300/60 before:via-blue-400/25 before:to-emerald-300/45">
+
+      <ol className="grid gap-5 lg:grid-cols-3">
         {experience.map((item, index) => (
           <ExperienceCard key={`${item.title}-${item.company}`} item={item} index={index} />
         ))}
-      </div>
+      </ol>
     </section>
   );
 }

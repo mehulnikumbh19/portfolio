@@ -1,43 +1,63 @@
 import { Download } from "lucide-react";
-import GlassCard from "./GlassCard";
-import SectionHeading from "./SectionHeading";
+import RetroCard from "./RetroCard";
+import SectionTitle from "./SectionTitle";
+import Badge from "./Badge";
 import { artifacts } from "../data/portfolioData";
+
+const tonePalette = ["paper", "cream", "paper", "cream", "paper", "cream", "paper"];
 
 export default function Artifacts() {
   return (
-    <section className="section-shell">
-      <SectionHeading
-        eyebrow="Portfolio Artifacts"
-        title="Evidence samples and project files"
-        description="Downloadable placeholders for resume, GRC portfolio assets, trackers, and workbook samples."
+    <section className="site-shell py-14 sm:py-20">
+      <SectionTitle
+        kicker="Cartridges"
+        title="Portfolio Artifacts"
+        description="Downloadable files. Most are placeholders until added to the public folder."
       />
+
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {artifacts.map((artifact, index) => {
           const Icon = artifact.icon;
+          const tone = tonePalette[index % tonePalette.length];
           return (
-            <GlassCard key={artifact.title} delay={index * 0.04} className="p-5">
-              <div className="flex items-start justify-between gap-4">
-                <span className="grid h-11 w-11 place-items-center rounded-xl border border-cyan-300/22 bg-cyan-300/10 text-cyan-200">
-                  <Icon className="h-5 w-5" aria-hidden="true" />
-                </span>
-                <span className="chip">{artifact.fileType}</span>
+            <RetroCard key={artifact.title} tone={tone} delay={index * 0.04} className="p-0">
+              <div className="titlebar">
+                <span>{`cart_0${index + 1}.${artifact.fileType.toLowerCase()}`}</span>
+                <Badge tone="orange" className="!border-paper">
+                  {artifact.fileType}
+                </Badge>
               </div>
-              <h3 className="display-3 mt-5">{artifact.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-slate-300">{artifact.description}</p>
-              {artifact.isPlaceholder ? (
-                <span className="mt-5 inline-flex rounded-full border border-amber-300/24 bg-amber-300/10 px-3 py-1.5 font-mono text-xs text-amber-100">
-                  File coming soon
-                </span>
-              ) : null}
-              <a className="btn-ghost mt-5 w-full" href={artifact.href} aria-label={`Download ${artifact.title}`}>
-                <Download className="h-4 w-4" aria-hidden="true" />
-                Download
-              </a>
-            </GlassCard>
+              <div className="flex flex-col gap-4 p-5 sm:p-6">
+                <div className="flex items-start gap-3">
+                  <span className="grid h-12 w-12 place-items-center border-2 border-ink bg-orange text-ink">
+                    {Icon ? <Icon className="h-6 w-6" aria-hidden="true" /> : null}
+                  </span>
+                  <div>
+                    <h3 className="pixel-heading text-[1.4rem] text-ink">{artifact.title}</h3>
+                    <p className="pixel-label text-rust">File coming soon (placeholder)</p>
+                  </div>
+                </div>
+                <p className="text-[0.93rem] leading-relaxed text-brown">{artifact.description}</p>
+                {artifact.isPlaceholder ? (
+                  <span className="pixel-label border-2 border-dashed border-ink bg-cream px-3 py-2 text-rust">
+                    Add file to /public to enable download
+                  </span>
+                ) : (
+                  <a
+                    className="btn-retro btn-retro--orange w-full justify-center"
+                    href={artifact.href}
+                  >
+                    <Download className="h-4 w-4" aria-hidden="true" />
+                    Download
+                  </a>
+                )}
+              </div>
+            </RetroCard>
           );
         })}
       </div>
-      <p className="mt-6 rounded-2xl border border-emerald-300/24 bg-emerald-300/10 px-4 py-3 text-sm text-emerald-100">
+
+      <p className="pixel-label mt-8 border-2 border-ink bg-cream px-3 py-2 text-rust">
         Selected artifacts use simulated data for portfolio demonstration purposes.
       </p>
     </section>
