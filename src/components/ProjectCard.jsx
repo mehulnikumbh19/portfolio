@@ -43,6 +43,31 @@ function AccessMatrixPreview() {
   );
 }
 
+function VendorReviewPreview() {
+  const rows = [
+    { label: "SOC 2", value: "review", tone: "bg-success" },
+    { label: "BAA", value: "gap", tone: "bg-risk" },
+    { label: "DPA", value: "expired", tone: "bg-warn" },
+    { label: "MFA", value: "follow-up", tone: "bg-paper" }
+  ];
+
+  return (
+    <ul className="space-y-1.5">
+      {rows.map((row) => (
+        <li
+          key={row.label}
+          className="grid grid-cols-[4.5rem_1fr] items-center gap-2 border-2 border-ink bg-paper px-2 py-1.5"
+        >
+          <span className={`pixel-label border-2 border-ink px-1.5 py-0.5 text-ink ${row.tone}`}>
+            {row.label}
+          </span>
+          <span className="pixel-label text-ink">{row.value}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 function ControlMappingPreview() {
   const rows = ["AC-2 . Account Mgmt", "AU-6 . Audit Review", "CM-7 . Least Function", "RA-3 . Risk Assessment", "IR-4 . Incident Handling"];
   return (
@@ -117,6 +142,7 @@ function SiemFeedPreview() {
 }
 
 const previewMap = {
+  MANDATE: { Component: VendorReviewPreview, tag: "TPRM Review" },
   AccessGuard: { Component: AccessMatrixPreview, tag: "Access Matrix" },
   Bastion: { Component: ControlMappingPreview, tag: "Control Map" },
   Patchwork: { Component: VulnHeatmapPreview, tag: "Risk Heatmap" },
@@ -228,30 +254,50 @@ export default function ProjectCard({ project, index }) {
         </div>
 
         <div className="mt-6 flex flex-wrap gap-2">
-          <a
-            className="btn-retro btn-retro--ghost"
-            href={project.links.github}
-            aria-label={`View ${project.name} on GitHub`}
-          >
-            <Github className="h-4 w-4" aria-hidden="true" />
-            GitHub
-          </a>
-          <a
-            className="btn-retro btn-retro--ghost"
-            href={project.links.caseStudy}
-            aria-label={`View ${project.name} case study`}
-          >
-            Case Study
-            <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-          </a>
-          <a
-            className="btn-retro btn-retro--orange"
-            href={project.links.artifact}
-            aria-label={`Download ${project.name} artifact`}
-          >
-            <Download className="h-4 w-4" aria-hidden="true" />
-            Artifact
-          </a>
+          {project.links.live ? (
+            <a
+              className="btn-retro btn-retro--orange"
+              href={project.links.live}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Open ${project.name} live app`}
+            >
+              Live App
+              <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+            </a>
+          ) : null}
+          {project.links.github ? (
+            <a
+              className="btn-retro btn-retro--ghost"
+              href={project.links.github}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`View ${project.name} on GitHub`}
+            >
+              <Github className="h-4 w-4" aria-hidden="true" />
+              GitHub
+            </a>
+          ) : null}
+          {project.links.caseStudy ? (
+            <a
+              className="btn-retro btn-retro--ghost"
+              href={project.links.caseStudy}
+              aria-label={`View ${project.name} case study`}
+            >
+              Case Study
+              <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+            </a>
+          ) : null}
+          {project.links.artifact ? (
+            <a
+              className="btn-retro btn-retro--orange"
+              href={project.links.artifact}
+              aria-label={`Download ${project.name} artifact`}
+            >
+              <Download className="h-4 w-4" aria-hidden="true" />
+              Artifact
+            </a>
+          ) : null}
         </div>
       </div>
     </RetroCard>

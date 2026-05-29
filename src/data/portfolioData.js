@@ -352,6 +352,39 @@ export const metrics = [
 
 export const projects = [
   {
+    name: "MANDATE",
+    icon: ClipboardCheck,
+    subtitle: "Third-Party Security & Data Handling Review Tracker",
+    description:
+      "A third-party risk and GRC platform for vendor inventories, questionnaire review, evidence gap analysis, residual risk scoring, follow-up tracking, and executive reporting.",
+    metrics: [
+      "15 simulated vendors",
+      "75 questionnaire reviews",
+      "30 evidence records",
+      "12 risk assessments",
+      "20 follow-ups",
+      "8 remediations"
+    ],
+    bullets: [
+      "Built a Flask and SQLite-backed TPRM workflow for reviewing vendor security posture, sensitive data handling, and approval readiness.",
+      "Automated evidence gap detection for SOC 2, ISO 27001, HIPAA BAA, PCI AOC, and other security artifacts.",
+      "Implemented inherent and residual risk scoring using likelihood, impact, data sensitivity, criticality, and compensating controls.",
+      "Generated management-ready exports and summaries for open follow-ups, remediation items, expired evidence, and approval exceptions."
+    ],
+    tags: [
+      "Third-Party Risk",
+      "Vendor Security",
+      "GRC",
+      "Evidence Review",
+      "Risk Scoring",
+      "Executive Reporting"
+    ],
+    links: {
+      live: "https://mandatemehul.vercel.app/",
+      github: "https://github.com/mehulnikumbh19/MANDATE"
+    }
+  },
+  {
     name: "AccessGuard",
     icon: KeyRound,
     subtitle: "User Access Review & Provisioning Control Testing Workflow",
@@ -382,7 +415,7 @@ export const projects = [
       "Segregation of Duties"
     ],
     links: {
-      github: "#",
+      github: "https://github.com/mehulnikumbh19/AccessGuard",
       caseStudy: "#case-studies",
       artifact: "/AccessGuard_Project_Guide.pdf"
     }
@@ -408,7 +441,12 @@ export const projects = [
       "Risk Assessment",
       "Remediation Tracking"
     ],
-    links: { github: "#", caseStudy: "#case-studies", artifact: "/Mehul_Nikumbh_GRC_Portfolio.pdf" }
+    links: {
+      live: "https://bastion.streamlit.app/",
+      github: "https://github.com/mehulnikumbh19/bastion-grc",
+      caseStudy: "#case-studies",
+      artifact: "/Mehul_Nikumbh_GRC_Portfolio.pdf"
+    }
   },
   {
     name: "Patchwork",
@@ -431,7 +469,7 @@ export const projects = [
       "Asset Criticality",
       "Compliance Reporting"
     ],
-    links: { github: "#", caseStudy: "#case-studies", artifact: "/Risk_Register_Sample.xlsx" }
+    links: { caseStudy: "#case-studies", artifact: "/Risk_Register_Sample.xlsx" }
   },
   {
     name: "Watchtower",
@@ -454,7 +492,7 @@ export const projects = [
       "MITRE ATT&CK",
       "Security Monitoring"
     ],
-    links: { github: "#", caseStudy: "#case-studies", artifact: "/Mehul_Nikumbh_GRC_Portfolio.pdf" }
+    links: { caseStudy: "#case-studies", artifact: "/Mehul_Nikumbh_GRC_Portfolio.pdf" }
   }
 ];
 
