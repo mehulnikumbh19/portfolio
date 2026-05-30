@@ -68,6 +68,31 @@ function VendorReviewPreview() {
   );
 }
 
+function ControlReviewPreview() {
+  const rows = [
+    { domain: "MFA", status: "gap", tone: "bg-risk" },
+    { domain: "Logs", status: "review", tone: "bg-warn" },
+    { domain: "KMS", status: "accepted", tone: "bg-success" },
+    { domain: "Policy", status: "mapped", tone: "bg-paper" }
+  ];
+
+  return (
+    <ul className="space-y-1.5">
+      {rows.map((row) => (
+        <li
+          key={row.domain}
+          className="grid grid-cols-[4.5rem_1fr] items-center gap-2 border-2 border-ink bg-paper px-2 py-1.5"
+        >
+          <span className={`pixel-label border-2 border-ink px-1.5 py-0.5 text-ink ${row.tone}`}>
+            {row.domain}
+          </span>
+          <span className="pixel-label text-ink">{row.status}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 function ControlMappingPreview() {
   const rows = ["AC-2 . Account Mgmt", "AU-6 . Audit Review", "CM-7 . Least Function", "RA-3 . Risk Assessment", "IR-4 . Incident Handling"];
   return (
@@ -143,6 +168,7 @@ function SiemFeedPreview() {
 
 const previewMap = {
   MANDATE: { Component: VendorReviewPreview, tag: "TPRM Review" },
+  SAFEGUARD: { Component: ControlReviewPreview, tag: "Control Review" },
   AccessGuard: { Component: AccessMatrixPreview, tag: "Access Matrix" },
   Bastion: { Component: ControlMappingPreview, tag: "Control Map" },
   Patchwork: { Component: VulnHeatmapPreview, tag: "Risk Heatmap" },
