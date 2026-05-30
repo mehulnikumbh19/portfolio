@@ -26,7 +26,7 @@ import {
 
 export const profile = {
   name: "Mehul Nikumbh",
-  role: "Cybersecurity GRC • IT Risk • Security Compliance",
+  role: "Cybersecurity GRC â€¢ IT Risk â€¢ Security Compliance",
   heroHeadline: "Cybersecurity evidence turned into audit-ready risk decisions.",
   summary:
     "I build practical cybersecurity and GRC workflows that turn technical security evidence into risk-based decisions. My work focuses on control assessments, audit evidence tracking, vulnerability risk prioritization, IAM governance, remediation reporting, and security compliance documentation.",
@@ -382,6 +382,40 @@ export const projects = [
     links: {
       live: "https://mandatemehul.vercel.app/",
       github: "https://github.com/mehulnikumbh19/MANDATE"
+    }
+  },
+  {
+    name: "SAFEGUARD",
+    icon: ShieldCheck,
+    subtitle: "Access, Logging & Cloud Control Review Workbook",
+    description:
+      "A Flask and SQLite security control review workbench that turns spreadsheet-style evidence tracking into an audit-ready workflow for access, logging, encryption, cloud configuration, risk, and remediation reporting.",
+    metrics: [
+      "12 control domains",
+      "8 framework mappings",
+      "Evidence aging flags",
+      "Risk register exports",
+      "Excel and Markdown reports",
+      "CSV import templates"
+    ],
+    bullets: [
+      "Built a web-based security assessment workflow for reviewing systems, technical controls, evidence requests, observations, remediation owners, and policy mappings.",
+      "Implemented automated risk flags for missing MFA evidence, incomplete production logging evidence, PHI/payment encryption gaps, evidence aging, and overdue remediation.",
+      "Created dashboards for assessment readiness, control status, evidence health, risk themes, cloud providers, remediation status, and framework coverage.",
+      "Added Excel workbook, Markdown management report, system-level report, filtered systems CSV, risk register CSV, and validated CSV import workflows."
+    ],
+    tags: [
+      "Control Review",
+      "Audit Evidence",
+      "Access Controls",
+      "Logging",
+      "Cloud Security",
+      "Risk Register",
+      "Remediation Tracking",
+      "Policy Mapping"
+    ],
+    links: {
+      github: "https://github.com/mehulnikumbh19/SAFEGUARD"
     }
   },
   {
