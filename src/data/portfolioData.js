@@ -26,12 +26,12 @@ import {
 
 export const profile = {
   name: "Mehul Nikumbh",
-  role: "Cybersecurity GRC â€¢ IT Risk â€¢ Security Compliance",
+  role: "Cybersecurity GRC | IT Risk | Security Compliance",
   heroHeadline: "Cybersecurity evidence turned into audit-ready risk decisions.",
   summary:
     "I build practical cybersecurity and GRC workflows that turn technical security evidence into risk-based decisions. My work focuses on control assessments, audit evidence tracking, vulnerability risk prioritization, IAM governance, remediation reporting, and security compliance documentation.",
   education:
-    "M.S. Information Systems, Cybersecurity Concentration @ California State University, Long Beach",
+    "M.S. Information Systems (Cybersecurity), GPA 3.44 @ California State University, Long Beach",
   availability:
     "Available for GRC, IT Risk, Security Compliance, IT Audit, and Information Security roles.",
   email: "mnikumbh19@gmail.com",
@@ -294,49 +294,41 @@ export const skillGroups = [
 
 export const experience = [
   {
-    title: "Information Security Analyst",
-    company: "Vivekanand Education Society's Institute Of Technology",
-    type: "Full-time",
-    dates: "May 2023 - Aug 2024",
-    location: "Mumbai, Maharashtra, India",
-    tags: ["GRC", "Risk Assessment", "Audit Readiness", "Access Review", "Vendor Risk", "Excel Reporting"],
-    bullets: [
-      "Performed security risk assessments and control gap reviews across applications, systems, and business processes mapped to NIST CSF, ISO 27001, CIS Controls, and internal security policies.",
-      "Supported audit readiness by collecting, validating, and organizing control evidence including screenshots, tickets, access reports, configuration exports, vulnerability reports, and policy documents.",
-      "Assisted with user access review testing, including user population validation, privileged access checks, provisioning/de-provisioning review, terminated-user access review, and exception documentation.",
-      "Maintained risk registers with risk descriptions, likelihood and impact ratings, control gaps, risk owners, remediation due dates, and status updates.",
-      "Coordinated with application owners, IT teams, security stakeholders, and management to track remediation plans, compensating controls, and closure evidence.",
-      "Reviewed third-party and vendor security documentation such as questionnaires, SOC 2 reports, ISO 27001 certificates, security policies, and data protection controls to identify vendor risk.",
-      "Prepared Excel-based dashboards and trackers for open findings, control gaps, remediation status, risk ratings, and audit evidence completion."
-    ]
-  },
-  {
     title: "Cybersecurity Intern",
     company: "The Cheesecake Factory",
     type: "Internship",
     dates: "Jun 2025 - Aug 2025",
-    location: "Calabasas, California, United States",
-    tags: ["Security Operations", "SIEM", "CrowdStrike", "Third-Party Risk", "Audit Evidence"],
+    location: "United States",
+    tags: ["Third-Party Risk", "OAuth Review", "SSO/MFA", "SIEM Evidence", "Phishing Metrics"],
     bullets: [
-      "Supported security operations and audit-readiness workflows through endpoint and SIEM alert review.",
-      "Validated CrowdStrike Falcon detections and documented findings for remediation tracking and evidence collection.",
-      "Assisted with third-party application usage review to identify potential data leakage and governance risks.",
-      "Reviewed firewall and SIEM configurations to identify visibility gaps, policy concerns, and control improvement opportunities.",
-      "Documented technical findings in a structured format to support remediation and security stakeholder review."
+      "Assessed 6+ third-party cloud applications for data leakage and access risk by reviewing OAuth scopes, SSO/MFA status, user permissions, data access patterns, and alignment with internal data handling requirements.",
+      "Compared firewall and SIEM configuration evidence against CIS Benchmark and internal policy baselines; documented 12+ control gaps with severity, evidence source, owner, recommended action, and remediation status.",
+      "Translated phishing simulation and user-reported incident trends across 30+ cases into awareness metrics, policy follow-up items, and concise security reporting for IT and compliance stakeholders."
+    ]
+  },
+  {
+    title: "Security Analyst",
+    company: "VESIT (University of Mumbai)",
+    type: "Full-time",
+    dates: "May 2023 - Aug 2024",
+    location: "Mumbai, India",
+    tags: ["Wazuh SIEM", "OpenVAS", "Nmap", "CIS Benchmark", "Remediation Tracking"],
+    bullets: [
+      "Maintained incident, access, and remediation evidence for 200+ endpoints using Wazuh SIEM, Windows Event Logs, screenshots, and ticket notes to support quarterly compliance reviews.",
+      "Validated OpenVAS and Nmap findings against CIS Benchmark expectations, assigned CVSS-based severity, separated exceptions, and maintained remediation tracking reports for IT governance stakeholders.",
+      "Prepared owner-view status summaries across open findings, recurring control issues, log evidence, and closure items to support risk visibility and follow-up with technical teams."
     ]
   },
   {
     title: "Security Operations Intern",
-    company: "TeleNetworks Technologies Private Limited",
+    company: "Telenetworks Technologies",
     type: "Internship",
     dates: "Dec 2022 - May 2023",
-    location: "Mumbai, Maharashtra, India",
-    tags: ["Security Logs", "Control Gaps", "Incident Evidence", "Remediation Tracking"],
+    location: "Mumbai, India",
+    tags: ["Baseline Configuration", "Control Evidence", "Risk Impact", "Remediation Timeline"],
     bullets: [
-      "Reviewed endpoint and network security logs to identify anomalies, control deviations, and investigation evidence.",
-      "Assessed infrastructure configurations against hardening expectations and documented remediation gaps.",
-      "Correlated host and network evidence to support incident investigations, root-cause summaries, and severity-based reporting.",
-      "Maintained structured remediation tracking for security findings and open control gaps."
+      "Reviewed baseline configurations for 25+ infrastructure systems against security policy expectations; documented 8 deviations with evidence source, risk impact, owner, and remediation timeline.",
+      "Organized control evidence packages for 4 compliance assessments, including request lists, configuration exports, log samples, screenshots, review notes, and closure documentation."
     ]
   }
 ];
@@ -945,9 +937,28 @@ export const artifacts = [
 ];
 
 export const education = {
-  school: "California State University, Long Beach",
-  degree: "M.S. Information Systems, Cybersecurity Concentration",
   icon: GraduationCap,
+  entries: [
+    {
+      school: "California State University, Long Beach",
+      dates: "Aug 2024 - May 2026",
+      degree: "Master of Science, Information Systems (Cybersecurity)",
+      gpa: "3.44",
+      location: "Long Beach, CA"
+    },
+    {
+      school: "University of Mumbai",
+      dates: "Feb 2020 - May 2024",
+      degree: "Bachelor of Engineering, Electronics (Honors: Cybersecurity)",
+      gpa: "3.8",
+      location: "Mumbai, India"
+    }
+  ],
+  school: "California State University, Long Beach",
+  degree: "Master of Science, Information Systems (Cybersecurity)",
+  dates: "Aug 2024 - May 2026",
+  gpa: "3.44",
+  location: "Long Beach, CA",
   focusAreas: [
     "Cybersecurity analytics",
     "Governance, risk, and compliance",
