@@ -415,6 +415,7 @@ export const projects = [
       "Policy Mapping"
     ],
     links: {
+      live: "https://safeguard-d5ik.onrender.com/",
       github: "https://github.com/mehulnikumbh19/SAFEGUARD"
     }
   },
@@ -476,7 +477,7 @@ export const projects = [
       "Remediation Tracking"
     ],
     links: {
-      live: "https://bastion.streamlit.app/",
+      live: "https://bastion-grc.vercel.app/",
       github: "https://github.com/mehulnikumbh19/bastion-grc",
       caseStudy: "#case-studies",
       artifact: "/Mehul_Nikumbh_GRC_Portfolio.pdf"
