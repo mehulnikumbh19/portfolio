@@ -38,9 +38,9 @@ export const profile = {
   location: "United States",
   linkedin: "https://www.linkedin.com/in/mehulnikumbh/",
   github: "https://github.com/mehulnikumbh19",
-  resume: "/Mehul_Nikumbh_Resume.pdf",
-  grcPortfolio: "/Mehul_Nikumbh_GRC_Portfolio.pdf",
-  accessGuardGuide: "/AccessGuard_Project_Guide.pdf"
+  resume: `${import.meta.env.BASE_URL}Mehul_Nikumbh_Resume.pdf`,
+  grcPortfolio: `${import.meta.env.BASE_URL}Mehul_Nikumbh_GRC_Portfolio.pdf`,
+  accessGuardGuide: `${import.meta.env.BASE_URL}AccessGuard_Project_Guide.pdf`
 };
 
 export const heroSkills = [
