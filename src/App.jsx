@@ -7,7 +7,6 @@ import ProblemsSolved from "./components/ProblemsSolved";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import FrameworkMapping from "./components/FrameworkMapping";
-import Artifacts from "./components/Artifacts";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -24,7 +23,6 @@ export default function App() {
         <Experience />
         <Projects />
         <FrameworkMapping />
-        <Artifacts />
         <Contact />
       </main>
       <Footer />

@@ -83,8 +83,7 @@ export default function Hero() {
               <a
                 className="btn-retro btn-retro--ghost"
                 href={profile.resume}
-                target="_blank"
-                rel="noreferrer"
+                download
               >
                 <Download className="h-4 w-4" aria-hidden="true" />
                 Resume

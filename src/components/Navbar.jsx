@@ -104,9 +104,8 @@ export default function Navbar() {
               <a
                 className="btn-retro btn-retro--orange hidden text-[1rem] sm:inline-flex"
                 href={profile.resume}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Download resume (placeholder until file is added to public folder)"
+                download
+                aria-label="Download resume"
               >
                 Resume
               </a>

@@ -93,8 +93,9 @@ export default function Contact() {
                 <a
                   key={button.label}
                   href={button.href}
-                  target={button.external ? "_blank" : undefined}
-                  rel={button.external ? "noreferrer" : undefined}
+                  target={button.href === profile.resume ? undefined : (button.external ? "_blank" : undefined)}
+                  rel={button.href === profile.resume ? undefined : (button.external ? "noreferrer" : undefined)}
+                  download={button.href === profile.resume ? true : undefined}
                   className={`${button.variant} w-full justify-between`}
                   aria-label={button.label}
                 >
