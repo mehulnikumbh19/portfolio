@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   Briefcase,
-  FileBadge,
   Github,
   Home,
   Linkedin,
@@ -22,8 +21,6 @@ const iconForLink = {
   Skills: Wrench,
   Experience: Briefcase,
   Projects: ShieldCheck,
-  "Case Studies": FileBadge,
-  "GRC Lab": ShieldCheck,
   Contact: Mail
 };
 

@@ -58,8 +58,6 @@ export const navLinks = [
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
-  { label: "Case Studies", href: "#case-studies" },
-  { label: "GRC Lab", href: "#grc-lab" },
   { label: "Contact", href: "#contact" }
 ];
 

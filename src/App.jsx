@@ -6,8 +6,6 @@ import Skills from "./components/Skills";
 import ProblemsSolved from "./components/ProblemsSolved";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
-import CaseStudies from "./components/CaseStudies";
-import GRCLab from "./components/GRCLab";
 import FrameworkMapping from "./components/FrameworkMapping";
 import Artifacts from "./components/Artifacts";
 import Contact from "./components/Contact";
@@ -25,8 +23,6 @@ export default function App() {
         <ProblemsSolved />
         <Experience />
         <Projects />
-        <CaseStudies />
-        <GRCLab />
         <FrameworkMapping />
         <Artifacts />
         <Contact />
