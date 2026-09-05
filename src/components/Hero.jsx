@@ -78,7 +78,7 @@ export default function Hero() {
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <a className="btn-retro btn-retro--orange" href="#projects">
-                View Projects <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                View Focus Areas <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </a>
               <a
                 className="btn-retro btn-retro--ghost"

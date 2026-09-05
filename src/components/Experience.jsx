@@ -8,10 +8,10 @@ export default function Experience() {
       <SectionTitle
         kicker="Resume"
         title="Experience"
-        description="Security operations roots paired with control testing, evidence, and risk reporting work."
+        description="Cloud security and GRC roles spanning enterprise control testing, cloud governance, and audit readiness."
       />
 
-      <ol className="grid gap-5 lg:grid-cols-3">
+      <ol className="grid gap-5 lg:grid-cols-2">
         {experience.map((item, index) => (
           <ExperienceCard key={`${item.title}-${item.company}`} item={item} index={index} />
         ))}

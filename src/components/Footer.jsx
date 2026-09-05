@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="retro-card bg-ink p-4 text-paper sm:p-5">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <p className="pixel-label text-orange">
-            Designed and built for GRC, IT Risk, and Security Compliance opportunities.
+            Designed and built for Cloud Security, GRC, and IT Risk opportunities.
           </p>
           <div className="flex items-center gap-2">
             <a

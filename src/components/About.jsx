@@ -8,7 +8,7 @@ export default function About() {
       <SectionTitle
         kicker="About"
         title="About Me"
-        description="Governance, risk, and compliance with technical security evidence."
+        description="Cloud security governance, risk, and compliance across AWS, Azure, and GCP."
       />
 
       <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
@@ -23,26 +23,27 @@ export default function About() {
           </div>
           <div className="space-y-4 p-5 text-[1rem] leading-[1.65] text-brown sm:p-6">
             <p>
-              I am a cybersecurity and GRC professional focused on IT risk, security compliance,
-              control testing, audit readiness, and risk-based remediation. I recently completed my
-              M.S. in Information Systems with a cybersecurity concentration at CSULB, and I am
-              targeting GRC Analyst, IT Risk Analyst, Security Compliance Analyst, Cybersecurity
-              Compliance Analyst, and Security Control Assessor roles.
+              I am a GRC and Cloud Security Analyst with 3+ years of experience across ITGC,
+              control testing, cloud risk assessments, audit readiness, and security compliance in
+              AWS, Azure, and GCP environments. I currently work as a GRC Analyst at BlackRock,
+              where I triage cloud security posture findings, review network and encryption
+              controls, and support regulatory control testing.
             </p>
             <p>
-              My background combines security operations experience with governance and compliance
-              work across control reviews, configuration assessments, vulnerability risk
-              prioritization, IAM and access workflow support, phishing response, third-party
-              application review, remediation tracking, and audit-ready documentation.
+              Previously, as a Cloud Security Analyst at Siemens, I maintained ISO 27001
+              documentation, executed ITGC control testing, administered ServiceNow IRM and CMDB
+              activities, and reviewed SAP GRC access and segregation-of-duties conflicts across a
+              global environment.
             </p>
             <p>
-              I am especially focused on NIST CSF, NIST 800-53, ISO 27001, SOC 2, SOX ITGC, PCI
-              DSS, CIS Controls, vendor risk, and security risk assessments.
+              My framework depth spans ISO 27001, NIST CSF, SOC 2, CIS Controls, GDPR, the DPDP
+              Act, CERT-In, and IEC 62443, paired with hands-on cloud IAM governance, CSPM triage,
+              Terraform and Kubernetes security review, and emerging AI/LLM governance work.
             </p>
             <p>
-              What differentiates me is the ability to translate technical security findings into
-              business-impact narratives, control deficiencies, risk ratings, remediation actions,
-              and stakeholder-ready documentation.
+              What differentiates me is the ability to translate technical cloud security findings
+              into audit-ready risk narratives, control deficiencies, and stakeholder-ready
+              reporting across complex, multi-cloud environments.
             </p>
           </div>
         </RetroCard>

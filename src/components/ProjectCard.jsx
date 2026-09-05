@@ -145,34 +145,12 @@ function VulnHeatmapPreview() {
   );
 }
 
-function SiemFeedPreview() {
-  const rows = [
-    { sev: "HIGH", text: "auth.fail . svc_admin . 17x", tone: "bg-risk" },
-    { sev: "MED", text: "edr.detect . T1059 PowerShell", tone: "bg-warn" },
-    { sev: "LOW", text: "net.scan . internal probe", tone: "bg-success" },
-    { sev: "MED", text: "edr.iso . endpoint quarantined", tone: "bg-warn" }
-  ];
-  return (
-    <ul className="space-y-1.5">
-      {rows.map((row) => (
-        <li key={row.text} className="flex items-center gap-2 border-2 border-ink bg-paper px-2 py-1.5">
-          <span className={`pixel-label border-2 border-ink px-1.5 py-0.5 ${row.tone} text-ink`}>
-            {row.sev}
-          </span>
-          <span className="pixel-label text-ink">{row.text}</span>
-        </li>
-      ))}
-    </ul>
-  );
-}
-
 const previewMap = {
-  MANDATE: { Component: VendorReviewPreview, tag: "TPRM Review" },
-  SAFEGUARD: { Component: ControlReviewPreview, tag: "Control Review" },
-  AccessGuard: { Component: AccessMatrixPreview, tag: "Access Matrix" },
-  Bastion: { Component: ControlMappingPreview, tag: "Control Map" },
-  Patchwork: { Component: VulnHeatmapPreview, tag: "Risk Heatmap" },
-  Watchtower: { Component: SiemFeedPreview, tag: "SIEM Feed" }
+  CSPM: { Component: ControlReviewPreview, tag: "Control Review" },
+  "IaC Guardrails": { Component: VulnHeatmapPreview, tag: "Guardrail Scan" },
+  "Cloud IAM": { Component: AccessMatrixPreview, tag: "Access Matrix" },
+  "Audit Readiness": { Component: ControlMappingPreview, tag: "Control Map" },
+  "Third-Party Risk": { Component: VendorReviewPreview, tag: "Vendor Review" }
 };
 
 const toneByIndex = ["paper", "dark", "cream", "paper"];

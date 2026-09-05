@@ -1,24 +1,23 @@
 import {
   AlertTriangle,
+  Award,
   BarChart3,
   BookOpen,
+  Bot,
   ClipboardCheck,
+  Cloud,
   Database,
   FileCheck2,
   FileSpreadsheet,
   Fingerprint,
   Gauge,
-  GitBranch,
   GraduationCap,
   KeyRound,
   Layers3,
-  Mail,
   Radar,
   ShieldCheck,
   ShieldHalf,
   Siren,
-  Target,
-  TimerReset,
   UsersRound
 } from "lucide-react";
 
@@ -26,30 +25,29 @@ import {
 
 export const profile = {
   name: "Mehul Nikumbh",
-  role: "Cybersecurity GRC | IT Risk | Security Compliance",
-  heroHeadline: "Cybersecurity evidence turned into audit-ready risk decisions.",
+  role: "Cybersecurity GRC & Cloud Security Analyst",
+  heroHeadline:
+    "Cloud security evidence, control testing, and audit readiness across AWS, Azure, and GCP.",
   summary:
-    "I build practical cybersecurity and GRC workflows that turn technical security evidence into risk-based decisions. My work focuses on control assessments, audit evidence tracking, vulnerability risk prioritization, IAM governance, remediation reporting, and security compliance documentation.",
+    "GRC and Cloud Security Analyst with 3+ years of experience specializing in ITGC, control testing, cloud risk assessments, audit readiness, and security compliance across AWS, Azure, and GCP environments. Strong expertise in ISO 27001, NIST CSF, SOC 2, IAM, CSPM, ServiceNow IRM, SAP GRC, and cloud security governance, with hands-on experience in risk remediation, access reviews, and third-party risk.",
   education:
-    "M.S. Information Systems (Cybersecurity), GPA 3.44 @ California State University, Long Beach",
+    "M.S. Information Systems (Cybersecurity) @ California State University, Long Beach, May 2026",
   availability:
-    "Available for GRC, IT Risk, Security Compliance, IT Audit, and Information Security roles.",
+    "Open to Cloud Security, GRC, IT Risk, and Security Compliance opportunities.",
   email: "mnikumbh19@gmail.com",
-  location: "United States",
+  location: "California, USA",
   linkedin: "https://www.linkedin.com/in/mehulnikumbh/",
   github: "https://github.com/mehulnikumbh19",
-  resume: `${import.meta.env.BASE_URL}Mehul_Nikumbh_Resume.pdf`,
-  grcPortfolio: `${import.meta.env.BASE_URL}Mehul_Nikumbh_GRC_Portfolio.pdf`,
-  accessGuardGuide: `${import.meta.env.BASE_URL}AccessGuard_Project_Guide.pdf`
+  resume: `${import.meta.env.BASE_URL}Mehul_Nikumbh_Resume.pdf`
 };
 
 export const heroSkills = [
-  "Control Testing",
-  "Risk Assessment",
-  "Audit Readiness",
-  "IAM Governance",
-  "Vulnerability Risk",
-  "Evidence Tracking"
+  "CSPM & Cloud Security",
+  "ISO 27001",
+  "SOC 2",
+  "Cloud IAM Governance",
+  "ITGC Control Testing",
+  "AI/LLM Risk Governance"
 ];
 
 export const navLinks = [
@@ -57,469 +55,364 @@ export const navLinks = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
+  { label: "Focus Areas", href: "#projects" },
   { label: "Contact", href: "#contact" }
-];
-
-export const heroBadges = [
-  "Open to GRC & IT Risk Roles",
-  "Audit Readiness",
-  "Risk Assessment",
-  "Control Testing",
-  "Security Compliance"
-];
-
-export const controlPanelMetrics = [
-  { label: "controls mapped", value: 120, suffix: "+", icon: ShieldCheck },
-  { label: "CVEs analyzed", value: 2000, suffix: "+", icon: AlertTriangle },
-  { label: "SIEM alerts processed", value: 500, suffix: "+", icon: Radar },
-  { label: "evidence gaps identified", value: 28, suffix: "", icon: FileCheck2 },
-  { label: "assets reviewed", value: 150, suffix: "", icon: Database },
-  { label: "control families assessed", value: 5, suffix: "", icon: Layers3 }
-];
-
-export const terminalLines = [
-  "initializing grc_control_room...",
-  "loading audit evidence...",
-  "mapping controls to risk...",
-  "status: open to GRC and IT Risk roles"
-];
-
-export const recruiterSnapshot = [
-  {
-    title: "Target Roles",
-    icon: Target,
-    text: "GRC Analyst, IT Risk Analyst, Security Compliance Analyst, Cybersecurity Compliance Analyst, Security Control Assessor"
-  },
-  {
-    title: "Core Strength",
-    icon: GitBranch,
-    text: "Translating technical findings into audit-ready risk narratives"
-  },
-  {
-    title: "Framework Focus",
-    icon: ClipboardCheck,
-    text: "NIST CSF, NIST 800-53, ISO 27001, SOC 2, SOX ITGC, PCI DSS, CIS Controls"
-  },
-  {
-    title: "Practical Edge",
-    icon: Gauge,
-    text: "Security operations foundation plus hands-on control evidence and risk tracking projects, bridging GRC Analyst, IT Auditor, and Information Security Analyst workflows"
-  }
 ];
 
 export const aboutCards = [
   {
-    title: "Technical Evidence",
+    title: "Cloud & Control Evidence",
     icon: Database,
-    text: "SIEM, endpoint, vulnerability, access, configuration, and ticket evidence"
+    text: "CSPM findings, cloud configuration exports, IAM assignments, audit logs, and control documentation across AWS, Azure, and GCP"
   },
   {
     title: "Risk Translation",
     icon: BarChart3,
-    text: "Likelihood, impact, residual risk, control gaps, remediation ownership"
+    text: "Likelihood, impact, residual risk, control gaps, and remediation ownership across cloud and ITGC controls"
   },
   {
     title: "Audit Readiness",
-    icon: FileSpreadsheet,
-    text: "Evidence tracking, control mapping, exception logs, stakeholder reporting"
+    icon: FileCheck2,
+    text: "ISO 27001 SoA evidence, ServiceNow IRM tracking, control mapping, and stakeholder-ready reporting"
+  },
+  {
+    title: "Certifications",
+    icon: Award,
+    text: "AWS Certified Cloud Practitioner, Microsoft SC-900, Google Cybersecurity Professional, Microsoft AZ-900"
   }
 ];
 
 export const problems = [
   {
-    title: "Messy Audit Evidence",
-    icon: FileCheck2,
+    title: "Cloud Misconfiguration & CSPM Gaps",
+    icon: AlertTriangle,
     description:
-      "Organizing screenshots, tickets, access reports, vulnerability exports, configuration evidence, and policy documents into audit-ready trackers."
+      "Triaging CSPM findings across AWS, Azure, and GCP, validating affected configurations, and closing control gaps with clear evidence and ownership."
   },
   {
-    title: "Access Review Gaps",
+    title: "Cloud IAM & Access Governance",
     icon: KeyRound,
     description:
-      "Testing user populations, privileged access, terminated-user access, provisioning/de-provisioning evidence, and SoD conflicts."
+      "Reviewing AWS IAM and Microsoft Entra ID assignments, orphaned identities, and standing privileges to support periodic access certification."
   },
   {
-    title: "Unprioritized Vulnerability Backlogs",
-    icon: AlertTriangle,
-    description:
-      "Converting CVEs into risk-ranked remediation queues using CVSS, exploitability, asset criticality, business impact, SLA status, and ownership."
-  },
-  {
-    title: "Control Mapping Confusion",
+    title: "Insecure IaC & Container Deployments",
     icon: Layers3,
     description:
-      "Mapping technical evidence and policies to NIST, ISO 27001, SOC 2, SOX ITGC, PCI DSS, and CIS Controls."
+      "Reviewing Terraform pull requests and Kubernetes configurations against guardrail policies like Azure Policy, AWS SCPs, and OPA Gatekeeper."
   },
   {
-    title: "Weak Stakeholder Reporting",
+    title: "ITGC & Audit Evidence Gaps",
+    icon: FileCheck2,
+    description:
+      "Maintaining ISO 27001 SoA evidence, executing ITGC control testing, and tracking remediation to closure with control owners."
+  },
+  {
+    title: "Third-Party & Vendor Risk Blind Spots",
     icon: UsersRound,
     description:
-      "Turning technical findings into business-risk narratives, control deficiencies, remediation actions, and leadership-ready summaries."
+      "Assessing SOC 2 Type II reports, ISO 27001 certifications, and client due-diligence questionnaires to support vendor security decisions."
   },
   {
-    title: "Remediation Drift",
-    icon: TimerReset,
+    title: "Emerging AI/LLM Governance Gaps",
+    icon: Bot,
     description:
-      "Tracking owners, due dates, compensating controls, exceptions, closure evidence, and open risk status."
-  }
-];
-
-export const workflowSteps = [
-  {
-    title: "Collect Evidence",
-    icon: Database,
-    examples:
-      "screenshots, tickets, access exports, vulnerability scans, SIEM alerts, policies, system configs"
-  },
-  {
-    title: "Test Controls",
-    icon: ClipboardCheck,
-    examples:
-      "access review testing, control mapping, configuration review, vulnerability validation, ticket review"
-  },
-  {
-    title: "Identify Gaps",
-    icon: AlertTriangle,
-    examples:
-      "missing evidence, unauthorized access, overdue remediation, weak MFA, orphan accounts, expired exceptions"
-  },
-  {
-    title: "Rate Risk",
-    icon: Gauge,
-    examples:
-      "likelihood, impact, severity, asset criticality, business exposure, compensating controls"
-  },
-  {
-    title: "Track Remediation",
-    icon: TimerReset,
-    examples: "owner, SLA, due date, status, closure evidence, exception approval"
-  },
-  {
-    title: "Report Clearly",
-    icon: BarChart3,
-    examples:
-      "risk dashboards, stakeholder summaries, audit evidence trackers, executive summaries"
+      "Maintaining AI/LLM use-case inventories and running prompt-injection and guardrail testing mapped to NIST AI RMF, ISO 42001, and the EU AI Act."
   }
 ];
 
 export const skillGroups = [
   {
-    title: "Governance & Compliance",
+    title: "GRC, Risk & Audit",
     icon: ShieldCheck,
     skills: [
-      "GRC",
-      "IT Risk",
-      "Security Compliance",
-      "Audit Readiness",
+      "ITGC",
       "Control Testing",
-      "Remediation Tracking",
+      "Audit Evidence",
+      "Audit Readiness",
+      "Risk Assessments",
       "Risk Register",
-      "Compliance Gap Analysis",
-      "Evidence Collection",
-      "Stakeholder Reporting",
-      "Control Effectiveness",
-      "Control Deficiency Management"
+      "Risk Treatment",
+      "Remediation Tracking",
+      "Third-Party Risk",
+      "Security Exceptions"
     ]
   },
   {
-    title: "Frameworks",
+    title: "Compliance & Frameworks",
     icon: BookOpen,
     skills: [
-      "NIST CSF",
-      "NIST 800-53",
       "ISO 27001",
+      "NIST CSF",
       "SOC 2",
-      "SOX ITGC",
-      "PCI DSS",
       "CIS Controls",
-      "CIS Benchmarks",
-      "OWASP Top 10",
-      "CWE"
+      "GDPR",
+      "DPDP Act",
+      "CERT-In",
+      "IEC 62443"
     ]
   },
   {
-    title: "IAM & Risk",
+    title: "Identity & Cloud Security",
     icon: Fingerprint,
     skills: [
-      "User Access Reviews",
-      "Provisioning",
-      "De-provisioning",
-      "Least Privilege",
-      "Privileged Access Review",
-      "Segregation of Duties",
-      "Joiner/Mover/Leaver Testing",
-      "Third-Party Risk",
-      "Vendor Risk",
-      "Vulnerability Risk Management"
+      "IAM",
+      "Microsoft Entra ID",
+      "AWS IAM",
+      "Access Reviews",
+      "SAP GRC",
+      "SoD",
+      "CSPM",
+      "AWS",
+      "Azure",
+      "GCP",
+      "Kubernetes",
+      "Cloud Configuration Reviews",
+      "AWS KMS",
+      "Azure Key Vault"
     ]
   },
   {
-    title: "Security Tools",
-    icon: Radar,
-    skills: [
-      "Splunk",
-      "Microsoft Sentinel",
-      "CrowdStrike Falcon",
-      "Wazuh",
-      "OpenVAS",
-      "Nmap",
-      "Wireshark",
-      "Active Directory",
-      "Sysmon",
-      "Windows Event Logs",
-      "AWS Security Fundamentals"
-    ]
-  },
-  {
-    title: "Data & Reporting",
+    title: "Tools & Reporting",
     icon: FileSpreadsheet,
     skills: [
+      "ServiceNow IRM",
+      "ServiceNow CMDB",
+      "Power BI",
       "Excel",
-      "Pivot Tables",
-      "XLOOKUP",
-      "SQL",
-      "Python",
-      "pandas",
-      "KPI/KRI Reporting",
-      "Dashboards",
-      "Evidence Trackers",
-      "Risk Matrices",
-      "Remediation Trackers"
+      "SharePoint",
+      "Azure DevOps",
+      "Terraform",
+      "AWS CloudTrail",
+      "Snowflake",
+      "Databricks"
     ]
   }
 ];
 
 export const experience = [
   {
-    title: "Cybersecurity Intern",
-    company: "The Cheesecake Factory",
-    type: "Internship",
-    dates: "Jun 2025 - Aug 2025",
-    location: "United States",
-    tags: ["Third-Party Risk", "OAuth Review", "SSO/MFA", "SIEM Evidence", "Phishing Metrics"],
-    bullets: [
-      "Assessed 6+ third-party cloud applications for data leakage and access risk by reviewing OAuth scopes, SSO/MFA status, user permissions, data access patterns, and alignment with internal data handling requirements.",
-      "Compared firewall and SIEM configuration evidence against CIS Benchmark and internal policy baselines; documented 12+ control gaps with severity, evidence source, owner, recommended action, and remediation status.",
-      "Translated phishing simulation and user-reported incident trends across 30+ cases into awareness metrics, policy follow-up items, and concise security reporting for IT and compliance stakeholders."
-    ]
-  },
-  {
-    title: "Security Analyst",
-    company: "VESIT (University of Mumbai)",
+    title: "GRC Analyst",
+    company: "BlackRock",
     type: "Full-time",
-    dates: "May 2023 - Aug 2024",
-    location: "Mumbai, India",
-    tags: ["Wazuh SIEM", "OpenVAS", "Nmap", "CIS Benchmark", "Remediation Tracking"],
+    dates: "Mar 2026 - Present",
+    location: "CA",
+    tags: ["CSPM", "AWS", "Azure", "GCP", "Terraform", "Kubernetes", "Microsoft Entra ID", "AI/LLM Governance"],
     bullets: [
-      "Maintained incident, access, and remediation evidence for 200+ endpoints using Wazuh SIEM, Windows Event Logs, screenshots, and ticket notes to support quarterly compliance reviews.",
-      "Validated OpenVAS and Nmap findings against CIS Benchmark expectations, assigned CVSS-based severity, separated exceptions, and maintained remediation tracking reports for IT governance stakeholders.",
-      "Prepared owner-view status summaries across open findings, recurring control issues, log evidence, and closure items to support risk visibility and follow-up with technical teams."
+      "Triage Cloud Security Posture Management (CSPM) findings across AWS, Azure, and GCP environments, validating affected configurations, documenting control gaps, and tracking remediation through closure in coordination with control owners.",
+      "Review AWS Security Group and Azure Network Security Group (NSG) rule sets, cloud segmentation, and micro-segmentation configurations to identify control deviations and validate encryption controls, including AWS KMS, Azure Key Vault, key-rotation, TLS, and data-at-rest encryption for SOC 1, SOC 2, and regulatory evidence collection.",
+      "Perform security reviews of Terraform pull requests, triage container and Kubernetes security findings (misconfigured pods, overly permissive RBAC, exposed dashboards), and assess guardrail configurations including Azure Policy, AWS SCPs, and OPA Gatekeeper policies.",
+      "Review AWS IAM and Microsoft Entra ID access assignments, including service principals, service accounts, orphaned identities, and excessive/standing privileges, supporting periodic cloud access certification campaigns and access-review processes.",
+      "Support Aladdin client security due-diligence questionnaires, map cloud configurations to applicable security controls, and assist in cloud audit log collection (AWS CloudTrail, Azure Monitor, GCP audit logs) for incident timeline reconstruction and regulatory control testing.",
+      "Maintain AI/LLM use-case inventory, support AI risk-intake assessments, verify AI data-flow and data-minimization practices, execute prompt-injection and AI guardrail testing based on predefined test plans, and map controls against NIST AI RMF, ISO 42001, and EU AI Act requirements."
     ]
   },
   {
-    title: "Security Operations Intern",
-    company: "Telenetworks Technologies",
-    type: "Internship",
-    dates: "Dec 2022 - May 2023",
-    location: "Mumbai, India",
-    tags: ["Baseline Configuration", "Control Evidence", "Risk Impact", "Remediation Timeline"],
+    title: "Cloud Security Analyst",
+    company: "Siemens",
+    type: "Full-time",
+    dates: "Jan 2022 - Jul 2024",
+    location: "India",
+    tags: ["ISO 27001", "ITGC", "ServiceNow IRM", "SAP GRC", "SoD", "GDPR", "DPDP Act", "CERT-In"],
     bullets: [
-      "Reviewed baseline configurations for 25+ infrastructure systems against security policy expectations; documented 8 deviations with evidence source, risk impact, owner, and remediation timeline.",
-      "Organized control evidence packages for 4 compliance assessments, including request lists, configuration exports, log samples, screenshots, review notes, and closure documentation."
+      "Maintained ISO 27001 security documentation and Statement of Applicability (SoA) evidence for cloud and security controls, supporting audit readiness and compliance reviews.",
+      "Executed assigned cloud security and ITGC control testing by collecting evidence, reviewing configurations, documenting control observations, and tracking remediation activities with control owners.",
+      "Administered ServiceNow IRM and CMDB activities involving cloud-related asset inventory, classification, control mapping, and security documentation while coordinating quarterly access recertification activities.",
+      "Reviewed SAP GRC Access Control results, Microsoft Entra access, segregation-of-duties (SoD) conflicts, mitigating controls, and firefighter access as part of established identity and access governance processes.",
+      "Managed cloud-security risk-register updates and assisted with system and project risk assessments, security exceptions, compensating controls, risk treatment, and remediation tracking.",
+      "Assessed third-party and supplier security documentation, including SOC 2 Type II reports and ISO 27001 certifications, supporting cloud vendor security due diligence and compliance reviews.",
+      "Coordinated GDPR, DPDP Act, and CERT-In compliance activities while preparing cloud-security KPI reporting through Power BI and Excel, and assisting with ISO 27001 internal and surveillance audit activities."
     ]
   }
 ];
 
 export const metrics = [
-  { label: "Controls Mapped", value: 120, suffix: "+", icon: ShieldCheck },
-  { label: "CVEs Analyzed", value: 2000, suffix: "+", icon: AlertTriangle },
-  { label: "SIEM Alerts Processed", value: 500, suffix: "+", icon: Radar },
-  { label: "Evidence Gaps Identified", value: 28, suffix: "", icon: FileCheck2 },
-  { label: "Assets Reviewed", value: 150, suffix: "", icon: Database },
-  { label: "Control Families Assessed", value: 5, suffix: "", icon: Layers3 }
+  { label: "Years GRC & Cloud Security Experience", value: 3, suffix: "+", icon: ShieldCheck },
+  { label: "Cloud Platforms (AWS / Azure / GCP)", value: 3, suffix: "", icon: Cloud },
+  { label: "Compliance Frameworks & Standards", value: 8, suffix: "", icon: BookOpen },
+  { label: "Industry Certifications", value: 4, suffix: "", icon: GraduationCap }
 ];
 
 export const projects = [
   {
-    name: "MANDATE",
-    icon: ClipboardCheck,
-    subtitle: "Third-Party Security & Data Handling Review Tracker",
+    name: "CSPM",
+    icon: Radar,
+    subtitle: "Multi-Cloud Posture & Control Gap Triage",
     description:
-      "A third-party risk and GRC platform for vendor inventories, questionnaire review, evidence gap analysis, residual risk scoring, follow-up tracking, and executive reporting.",
-    metrics: [
-      "15 simulated vendors",
-      "75 questionnaire reviews",
-      "30 evidence records",
-      "12 risk assessments",
-      "20 follow-ups",
-      "8 remediations"
-    ],
+      "Continuous triage of Cloud Security Posture Management findings across AWS, Azure, and GCP, validating misconfigurations, documenting control gaps, and driving remediation through closure with control owners.",
     bullets: [
-      "Built a Flask and SQLite-backed TPRM workflow for reviewing vendor security posture, sensitive data handling, and approval readiness.",
-      "Automated evidence gap detection for SOC 2, ISO 27001, HIPAA BAA, PCI AOC, and other security artifacts.",
-      "Implemented inherent and residual risk scoring using likelihood, impact, data sensitivity, criticality, and compensating controls.",
-      "Generated management-ready exports and summaries for open follow-ups, remediation items, expired evidence, and approval exceptions."
+      "Triage CSPM findings across AWS, Azure, and GCP, validating affected configurations and documenting control gaps.",
+      "Review AWS Security Groups, Azure NSG rule sets, and micro-segmentation configurations for control deviations.",
+      "Validate encryption controls, including AWS KMS, Azure Key Vault, key rotation, TLS, and data-at-rest encryption, for SOC 1, SOC 2, and regulatory evidence."
     ],
-    tags: [
-      "Third-Party Risk",
-      "Vendor Security",
-      "GRC",
-      "Evidence Review",
-      "Risk Scoring",
-      "Executive Reporting"
-    ],
-    links: {
-      live: "https://mandatemehul.vercel.app/",
-      github: "https://github.com/mehulnikumbh19/MANDATE"
-    }
+    tags: ["CSPM", "AWS", "Azure", "GCP", "AWS KMS", "Azure Key Vault"],
+    links: {}
   },
   {
-    name: "SAFEGUARD",
-    icon: ShieldCheck,
-    subtitle: "Access, Logging & Cloud Control Review Workbook",
+    name: "IaC Guardrails",
+    icon: Layers3,
+    subtitle: "Terraform, Kubernetes & Policy Enforcement",
     description:
-      "A Flask and SQLite security control review workbench that turns spreadsheet-style evidence tracking into an audit-ready workflow for access, logging, encryption, cloud configuration, risk, and remediation reporting.",
-    metrics: [
-      "12 control domains",
-      "8 framework mappings",
-      "Evidence aging flags",
-      "Risk register exports",
-      "Excel and Markdown reports",
-      "CSV import templates"
-    ],
+      "Security review of Terraform pull requests and Kubernetes workloads, assessing guardrail policy configurations that keep infrastructure-as-code changes within approved security baselines.",
     bullets: [
-      "Built a web-based security assessment workflow for reviewing systems, technical controls, evidence requests, observations, remediation owners, and policy mappings.",
-      "Implemented automated risk flags for missing MFA evidence, incomplete production logging evidence, PHI/payment encryption gaps, evidence aging, and overdue remediation.",
-      "Created dashboards for assessment readiness, control status, evidence health, risk themes, cloud providers, remediation status, and framework coverage.",
-      "Added Excel workbook, Markdown management report, system-level report, filtered systems CSV, risk register CSV, and validated CSV import workflows."
+      "Perform security reviews of Terraform pull requests before infrastructure changes are promoted.",
+      "Triage container and Kubernetes security findings, including misconfigured pods, overly permissive RBAC, and exposed dashboards.",
+      "Assess guardrail configurations including Azure Policy, AWS SCPs, and OPA Gatekeeper policies."
     ],
-    tags: [
-      "Control Review",
-      "Audit Evidence",
-      "Access Controls",
-      "Logging",
-      "Cloud Security",
-      "Risk Register",
-      "Remediation Tracking",
-      "Policy Mapping"
-    ],
-    links: {
-      live: "https://safeguard-d5ik.onrender.com/",
-      github: "https://github.com/mehulnikumbh19/SAFEGUARD"
-    }
+    tags: ["Terraform", "Kubernetes", "Azure Policy", "AWS SCPs", "OPA Gatekeeper"],
+    links: {}
   },
   {
-    name: "AccessGuard",
+    name: "Cloud IAM",
     icon: KeyRound,
-    subtitle: "User Access Review & Provisioning Control Testing Workflow",
+    subtitle: "AWS IAM, Entra ID & SAP GRC Access Governance",
     description:
-      "A simulated access governance project focused on access review testing, joiner/mover/leaver validation, privileged access review, and audit evidence tracking.",
-    metrics: [
-      "500 simulated employees",
-      "517 AD accounts",
-      "647 group membership records",
-      "25 privileged accounts",
-      "179 ticket records",
-      "28 exceptions identified",
-      "13 Excel workbook tabs"
-    ],
+      "End-to-end identity governance spanning AWS IAM, Microsoft Entra ID, and SAP GRC Access Control, covering periodic access certification, segregation-of-duties review, and privileged access oversight.",
     bullets: [
-      "Built a SOX ITGC, ISO 27001, and NIST-aligned access governance workflow using simulated HR, Active Directory, privileged account, and ticketing datasets.",
-      "Validated user access completeness, terminated-user access, privileged access exceptions, provisioning/de-provisioning evidence, and segregation-of-duties conflicts.",
-      "Created Excel-based evidence trackers, remediation dashboards, exception logs, risk-rating matrices, and control-owner status reports.",
-      "Mapped findings to least privilege, access governance, privileged access management, and periodic access review objectives."
+      "Review AWS IAM and Microsoft Entra ID access assignments, including service principals, orphaned identities, and standing privileges.",
+      "Review SAP GRC Access Control results, segregation-of-duties conflicts, mitigating controls, and firefighter access.",
+      "Support periodic cloud access certification campaigns and quarterly access recertification activities."
     ],
-    tags: [
-      "Access Reviews",
-      "IAM Governance",
-      "SOX ITGC",
-      "Audit Evidence",
-      "Provisioning",
-      "Least Privilege",
-      "Segregation of Duties"
-    ],
-    links: {
-      github: "https://github.com/mehulnikumbh19/AccessGuard",
-      caseStudy: "#case-studies",
-      artifact: "/AccessGuard_Project_Guide.pdf"
-    }
+    tags: ["AWS IAM", "Microsoft Entra ID", "SAP GRC", "SoD", "Access Certification"],
+    links: {}
   },
   {
-    name: "Bastion",
-    icon: ShieldHalf,
-    subtitle: "Compliance Control Mapping & Audit Evidence Tracker",
+    name: "AI Governance",
+    icon: Bot,
+    subtitle: "AI/LLM Use-Case Inventory & Guardrail Testing",
     description:
-      "A control mapping and audit-readiness project designed to connect framework requirements with technical evidence, control owners, and remediation status.",
-    metrics: ["120+ controls mapped", "28 evidence gaps", "5 control families"],
+      "Maintains the enterprise AI/LLM use-case inventory, executes AI risk-intake assessments, and runs prompt-injection and guardrail testing mapped to emerging AI governance frameworks.",
     bullets: [
-      "Mapped 120+ NIST 800-53 and CIS Controls to policy artifacts, technical evidence, and control-owner responsibilities.",
-      "Identified 28 evidence gaps across 5 control families and built structured remediation tracking workflows.",
-      "Created Excel/Python dashboards for evidence completeness, residual risk visibility, control effectiveness, and audit readiness.",
-      "Prioritized remediation using risk impact, control criticality, likelihood, and evidence quality."
+      "Maintain AI/LLM use-case inventory and support AI risk-intake assessments.",
+      "Verify AI data-flow and data-minimization practices, and execute prompt-injection and AI guardrail testing based on predefined test plans.",
+      "Map controls against NIST AI RMF, ISO 42001, and EU AI Act requirements."
     ],
-    tags: [
-      "Control Testing",
-      "NIST 800-53",
-      "CIS Controls",
-      "Audit Readiness",
-      "Risk Assessment",
-      "Remediation Tracking"
-    ],
-    links: {
-      live: "https://bastion-grc.vercel.app/",
-      github: "https://github.com/mehulnikumbh19/bastion-grc",
-      caseStudy: "#case-studies",
-      artifact: "/Mehul_Nikumbh_GRC_Portfolio.pdf"
-    }
+    tags: ["NIST AI RMF", "ISO 42001", "EU AI Act", "Prompt-Injection Testing", "AI Risk"],
+    links: {}
   },
   {
-    name: "Patchwork",
-    icon: AlertTriangle,
-    subtitle: "Vulnerability Risk Register & Remediation Prioritization Dashboard",
+    name: "Audit Readiness",
+    icon: FileCheck2,
+    subtitle: "ISO 27001, ITGC & Evidence Management",
     description:
-      "A vulnerability governance project focused on risk-based remediation, asset context, SLA tracking, and compliance-style reporting.",
-    metrics: ["2,000+ CVEs", "150 assets", "Risk-ranked queues"],
+      "Maintained ISO 27001 documentation and Statement of Applicability evidence while executing ITGC control testing, evidence collection, and remediation tracking with control owners.",
     bullets: [
-      "Correlated 2,000+ CVE records against a 150-asset inventory to build a centralized vulnerability risk register.",
-      "Created risk-ranked remediation queues using CVSS severity, exploit availability, business impact, and asset criticality.",
-      "Built dashboards for overdue remediation, high-risk assets, exception tracking, and leadership-level risk visibility.",
-      "Mapped findings to NIST/CIS-aligned vulnerability management expectations and produced remediation guidance for audit support."
+      "Maintained ISO 27001 security documentation and SoA evidence for cloud and security controls, supporting audit readiness.",
+      "Executed cloud security and ITGC control testing by collecting evidence, reviewing configurations, and documenting observations.",
+      "Administered ServiceNow IRM and CMDB activities, including asset inventory, classification, and control mapping."
     ],
-    tags: [
-      "Vulnerability Management",
-      "Risk Register",
-      "CVSS",
-      "Remediation SLA",
-      "Asset Criticality",
-      "Compliance Reporting"
-    ],
-    links: { caseStudy: "#case-studies", artifact: "/Risk_Register_Sample.xlsx" }
+    tags: ["ISO 27001", "ITGC", "ServiceNow IRM", "ServiceNow CMDB", "Audit Readiness"],
+    links: {}
   },
   {
-    name: "Watchtower",
-    icon: Siren,
-    subtitle: "SIEM Alert Evidence Review & Risk-Based Triage Workflow",
+    name: "Third-Party Risk",
+    icon: UsersRound,
+    subtitle: "Vendor Due Diligence & Regulatory Reporting",
     description:
-      "A security evidence and triage project focused on SIEM alert review, risk prioritization, and incident-ready documentation.",
-    metrics: ["500+ SIEM alerts", "IOC enrichment", "MITRE mapping"],
+      "Supported client and vendor security due-diligence reviews, cloud-security risk-register updates, and GDPR, DPDP Act, and CERT-In compliance reporting through Power BI and Excel.",
     bullets: [
-      "Processed 500+ simulated SIEM alerts and enriched indicators with external threat-intelligence context.",
-      "Built a risk-based triage workflow using asset criticality, IOC confidence, alert severity, and business impact.",
-      "Produced incident-ready documentation including evidence summaries, escalation status, recommended actions, and remediation notes.",
-      "Mapped findings to MITRE ATT&CK techniques to improve incident traceability and governance visibility."
+      "Support client security due-diligence questionnaires and map cloud configurations to applicable security controls.",
+      "Assessed third-party and supplier security documentation, including SOC 2 Type II reports and ISO 27001 certifications.",
+      "Coordinated GDPR, DPDP Act, and CERT-In compliance activities while preparing cloud-security KPI reporting through Power BI and Excel."
     ],
-    tags: [
-      "SIEM",
-      "Incident Documentation",
-      "Evidence Review",
-      "Risk-Based Triage",
-      "MITRE ATT&CK",
-      "Security Monitoring"
-    ],
-    links: { caseStudy: "#case-studies", artifact: "/Mehul_Nikumbh_GRC_Portfolio.pdf" }
+    tags: ["Third-Party Risk", "GDPR", "DPDP Act", "CERT-In", "Power BI", "Risk Register"],
+    links: {}
   }
 ];
+
+export const frameworks = [
+  {
+    name: "ISO 27001",
+    use: "Information security management system audit readiness",
+    work: "Maintained security documentation and Statement of Applicability (SoA) evidence; supported internal and surveillance audits.",
+    examples: "SoA evidence, Annex A controls, surveillance audits"
+  },
+  {
+    name: "NIST CSF",
+    use: "Cybersecurity governance and risk communication",
+    work: "Applied Identify, Protect, Detect, Respond, and Recover functions to structure cloud and cybersecurity risk assessments.",
+    examples: "Govern, Identify, Protect, Detect, Respond, Recover"
+  },
+  {
+    name: "SOC 2",
+    use: "Trust services evidence for cloud and vendor security",
+    work: "Validated encryption, access, and monitoring controls for SOC 1 and SOC 2 evidence collection; reviewed vendor SOC 2 Type II reports.",
+    examples: "Security, availability, confidentiality criteria"
+  },
+  {
+    name: "CIS Controls",
+    use: "Practical security hardening baseline",
+    work: "Benchmarked cloud and system configurations against CIS Controls during control testing and evidence review.",
+    examples: "Secure configuration, access control, logging"
+  },
+  {
+    name: "GDPR",
+    use: "EU data protection and privacy compliance",
+    work: "Coordinated GDPR compliance activities alongside cloud security and data-handling reviews.",
+    examples: "Data protection, cross-border transfer, privacy rights"
+  },
+  {
+    name: "DPDP Act",
+    use: "India Digital Personal Data Protection compliance",
+    work: "Coordinated DPDP Act compliance activities as part of regional data-protection obligations.",
+    examples: "Consent management, data fiduciary duties"
+  },
+  {
+    name: "CERT-In",
+    use: "Indian cybersecurity incident reporting mandate",
+    work: "Supported CERT-In compliance activities and incident-reporting readiness.",
+    examples: "Incident reporting, log retention"
+  },
+  {
+    name: "IEC 62443",
+    use: "Industrial and operational technology security",
+    work: "Applied IEC 62443 security concepts as part of broader compliance framework coverage for operational technology environments.",
+    examples: "Zones and conduits, OT security levels"
+  }
+];
+
+export const education = {
+  icon: GraduationCap,
+  entries: [
+    {
+      school: "California State University, Long Beach",
+      dates: "Aug 2024 - May 2026",
+      degree: "Master of Science, Information Systems (Cybersecurity)",
+      location: "Long Beach, CA"
+    },
+    {
+      school: "University of Mumbai",
+      dates: "2020 - May 2024",
+      degree: "Bachelor of Engineering, Electronics (Honors: Cybersecurity)",
+      location: "Mumbai, India"
+    }
+  ],
+  school: "California State University, Long Beach",
+  degree: "Master of Science, Information Systems (Cybersecurity)",
+  dates: "Aug 2024 - May 2026",
+  location: "Long Beach, CA",
+  focusAreas: [
+    "Cloud security governance",
+    "IT risk and control assessment",
+    "Security compliance and audit readiness",
+    "Identity and access management",
+    "Cybersecurity analytics"
+  ]
+};
+
+export const certifications = [
+  "AWS Certified Cloud Practitioner",
+  "Microsoft SC-900 (Security, Compliance, and Identity Fundamentals)",
+  "Google Cybersecurity Professional",
+  "Microsoft AZ-900 (Azure Fundamentals)"
+];
+
+/* -------------------------------------------------------------------------
+ * The exports below back components that are not currently wired into
+ * App.jsx (CaseStudies, GRCLab, Artifacts). They document simulated,
+ * non-resume practice projects and are left unchanged; they are not part
+ * of the live site and are out of scope for the resume-driven content pass.
+ * ---------------------------------------------------------------------- */
 
 export const caseStudies = [
   {
@@ -830,49 +723,12 @@ export const remediationColumns = [
   "Closure evidence"
 ];
 
-export const frameworks = [
-  {
-    name: "NIST CSF",
-    use: "Cybersecurity governance and risk communication",
-    work: "Risk identification, governance, asset protection, detection, response, recovery.",
-    examples: "Govern, Identify, Protect, Detect, Respond, Recover"
-  },
-  {
-    name: "NIST 800-53",
-    use: "Detailed security control assessment and control mapping",
-    work: "Access control, audit logging, configuration management, incident response, risk assessment.",
-    examples: "AC, AU, CM, IR, RA"
-  },
-  {
-    name: "ISO 27001",
-    use: "Information security management and audit evidence alignment",
-    work: "Information security controls, access management, supplier security, incident management, policy governance.",
-    examples: "Access management, supplier security, incident management"
-  },
-  {
-    name: "SOC 2",
-    use: "Trust services evidence and control owner readiness",
-    work: "Security, availability, confidentiality, processing integrity, privacy.",
-    examples: "Security, availability, confidentiality"
-  },
-  {
-    name: "SOX ITGC",
-    use: "IT general controls supporting financial reporting risk",
-    work: "Access controls, change management, operations, logical security, audit evidence.",
-    examples: "Access, change management, operations, logical security"
-  },
-  {
-    name: "PCI DSS",
-    use: "Payment security controls and compliance evidence",
-    work: "Cardholder data protection, access controls, vulnerability management, monitoring, policy enforcement.",
-    examples: "Vulnerability management, logging, access control"
-  },
-  {
-    name: "CIS Controls",
-    use: "Practical hardening and operational security baseline",
-    work: "Asset inventory, secure configuration, vulnerability management, access control, audit logging.",
-    examples: "Inventory, secure configuration, vulnerability management"
-  }
+export const riskMatrix = [
+  ["medium", "high", "high", "critical", "critical"],
+  ["low", "medium", "high", "high", "critical"],
+  ["low", "low", "medium", "high", "high"],
+  ["low", "low", "low", "medium", "high"],
+  ["low", "low", "low", "low", "medium"]
 ];
 
 export const artifacts = [
@@ -880,23 +736,15 @@ export const artifacts = [
     title: "Resume",
     href: "/Mehul_Nikumbh_Resume.pdf",
     icon: FileCheck2,
-    description: "One-page summary of GRC experience, projects, certifications, and target roles.",
+    description: "One-page summary of GRC and cloud security experience, certifications, and target roles.",
     fileType: "PDF",
-    isPlaceholder: true
-  },
-  {
-    title: "GRC Portfolio PDF",
-    href: "/Mehul_Nikumbh_GRC_Portfolio.pdf",
-    icon: ShieldCheck,
-    description: "Compiled overview of control mapping, risk registers, and audit evidence samples.",
-    fileType: "PDF",
-    isPlaceholder: true
+    isPlaceholder: false
   },
   {
     title: "AccessGuard Project Guide",
     href: "/AccessGuard_Project_Guide.pdf",
     icon: KeyRound,
-    description: "Walkthrough of the access review workflow, test cases, and workbook structure.",
+    description: "Walkthrough of the simulated access review workflow, test cases, and workbook structure.",
     fileType: "PDF",
     isPlaceholder: true
   },
@@ -917,14 +765,6 @@ export const artifacts = [
     isPlaceholder: true
   },
   {
-    title: "Vulnerability Dashboard Sample",
-    href: "/Vulnerability_Dashboard_Sample.xlsx",
-    icon: BarChart3,
-    description: "Dashboard views for CVE prioritization, SLA status, and asset criticality overlays.",
-    fileType: "XLSX",
-    isPlaceholder: true
-  },
-  {
     title: "Access Review Workbook Sample",
     href: "/Access_Review_Workbook_Sample.xlsx",
     icon: ClipboardCheck,
@@ -933,92 +773,3 @@ export const artifacts = [
     isPlaceholder: true
   }
 ];
-
-export const education = {
-  icon: GraduationCap,
-  entries: [
-    {
-      school: "California State University, Long Beach",
-      dates: "Aug 2024 - May 2026",
-      degree: "Master of Science, Information Systems (Cybersecurity)",
-      gpa: "3.44",
-      location: "Long Beach, CA"
-    },
-    {
-      school: "University of Mumbai",
-      dates: "Feb 2020 - May 2024",
-      degree: "Bachelor of Engineering, Electronics (Honors: Cybersecurity)",
-      gpa: "3.8",
-      location: "Mumbai, India"
-    }
-  ],
-  school: "California State University, Long Beach",
-  degree: "Master of Science, Information Systems (Cybersecurity)",
-  dates: "Aug 2024 - May 2026",
-  gpa: "3.44",
-  location: "Long Beach, CA",
-  focusAreas: [
-    "Cybersecurity analytics",
-    "Governance, risk, and compliance",
-    "Security operations",
-    "Risk management",
-    "Cloud and infrastructure security fundamentals",
-    "Data analysis and reporting"
-  ]
-};
-
-export const learningPriorities = [
-  "NIST CSF and NIST 800-53 control interpretation",
-  "ISO 27001 control objectives and audit evidence expectations",
-  "SOX ITGC concepts: access, change management, operations, and logical security",
-  "PCI DSS security control requirements",
-  "IAM governance and access certification workflows",
-  "Excel-based GRC reporting, risk registers, and compliance dashboards",
-  "ServiceNow, Jira, SailPoint, and OneTrust workflow fundamentals",
-  "Vendor risk questionnaires and SOC 2 report review basics"
-];
-
-export const faqs = [
-  {
-    question: "Why GRC after security operations?",
-    answer:
-      "My security operations background helps me understand the technical evidence behind controls. GRC requires the ability to connect technical findings to business risk, audit requirements, remediation actions, and stakeholder communication."
-  },
-  {
-    question: "Do you only focus on documentation?",
-    answer:
-      "No. I focus on risk-based governance work including risk registers, control testing, remediation tracking, access reviews, vulnerability prioritization, and audit-ready evidence, not documentation alone."
-  },
-  {
-    question: "What makes your profile useful for entry-level GRC roles?",
-    answer:
-      "I combine cybersecurity fundamentals with practical GRC project work across control mapping, risk registers, evidence tracking, access review testing, vulnerability prioritization, and audit-ready reporting."
-  },
-  {
-    question: "Are your projects based on real company data?",
-    answer:
-      "No. The projects use simulated data designed to mirror real enterprise workflows while protecting confidentiality and avoiding any misuse of real organizational information."
-  }
-];
-
-export const contactLinks = [
-  { label: "LinkedIn", href: profile.linkedin, icon: UsersRound },
-  { label: "GitHub", href: profile.github, icon: GitBranch },
-  { label: "Email", href: `mailto:${profile.email}`, icon: Mail },
-  { label: "Download Resume", href: profile.resume, icon: FileCheck2, isPlaceholder: true }
-];
-
-export const riskMatrix = [
-  ["medium", "high", "high", "critical", "critical"],
-  ["low", "medium", "high", "high", "critical"],
-  ["low", "low", "medium", "high", "high"],
-  ["low", "low", "low", "medium", "high"],
-  ["low", "low", "low", "low", "medium"]
-];
-
-export const sectionKickers = {
-  about: "Evidence, controls, and stakeholder-ready risk language",
-  skills: "Governance depth with technical security context",
-  projects: "Portfolio simulations using realistic enterprise workflows",
-  lab: "Compact previews of the tools and thinking behind the work"
-};

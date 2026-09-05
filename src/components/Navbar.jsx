@@ -77,7 +77,7 @@ export default function Navbar() {
                 <p className="pixel-heading text-[1.35rem] text-ink sm:text-[1.55rem]">
                   {profile.name}
                 </p>
-                <p className="pixel-label text-rust">Cybersecurity GRC</p>
+                <p className="pixel-label text-rust">Cloud Security & GRC</p>
               </div>
             </div>
 

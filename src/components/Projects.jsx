@@ -6,9 +6,9 @@ export default function Projects() {
   return (
     <section id="projects" className="site-shell py-14 sm:py-20">
       <SectionTitle
-        kicker="Portfolio"
-        title="Works"
-        description="GRC and cybersecurity projects built with simulated data, audit workflows, and risk reporting."
+        kicker="Focus Areas"
+        title="Where I Spend My Time"
+        description="Six recurring areas of work drawn directly from my GRC and cloud security roles at BlackRock and Siemens."
         size="xl"
       />
 
