@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050816"/>
+      <stop offset="0.5" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#06261f"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g opacity="0.22">
+    <path d="M0 120H1200M0 240H1200M0 360H1200M0 480H1200M160 0V630M320 0V630M480 0V630M640 0V630M800 0V630M960 0V630" stroke="#67e8f9"/>
+  </g>
+  <rect x="76" y="78" width="1048" height="474" rx="22" fill="#ffffff" opacity="0.06" stroke="#22d3ee" stroke-opacity="0.35"/>
+  <path d="M130 152h104M130 488h410M858 166h158M856 214h118M856 262h194" stroke="url(#line)" stroke-width="8" stroke-linecap="round"/>
+  <text x="130" y="245" fill="#e5faff" font-family="Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="7">MEHUL NIKUMBH</text>
+  <text x="130" y="326" fill="#ffffff" font-family="Arial, sans-serif" font-size="62" font-weight="700">Cybersecurity GRC</text>
+  <text x="130" y="398" fill="#ffffff" font-family="Arial, sans-serif" font-size="54" font-weight="700">IT Risk + Audit Readiness</text>
+  <text x="130" y="456" fill="#b8f7e2" font-family="Arial, sans-serif" font-size="28">Security Compliance, Control Testing, IAM Governance</text>
+  <g transform="translate(830 326)">
+    <rect width="214" height="142" rx="16" fill="#020617" opacity="0.55" stroke="#34d399" stroke-opacity="0.5"/>
+    <path d="M108 28l58 24v42c0 38-23 62-58 74-35-12-58-36-58-74V52l58-24Z" fill="#0f766e" opacity="0.85"/>
+    <path d="M82 100l19 19 37-48" fill="none" stroke="#a7f3d0" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
