@@ -2,11 +2,13 @@ import RetroCard from "./RetroCard";
 import SectionTitle from "./SectionTitle";
 import { frameworks } from "../data/portfolioData";
 
-const tonePalette = ["paper", "cream", "dark", "paper", "cream", "dark", "paper"];
+// Rendered inside a dark band, so paper/cream already read as two dark shades.
+const tonePalette = ["paper", "cream"];
 
 export default function FrameworkMapping() {
   return (
-    <section className="site-shell py-10 sm:py-14">
+    <section className="band band-dark">
+      <div className="site-shell py-10 sm:py-14">
       <SectionTitle
         kicker="References"
         title="Frameworks"
@@ -22,7 +24,8 @@ export default function FrameworkMapping() {
               key={framework.name}
               tone={tone}
               delay={index * 0.04}
-              className="p-0"
+              flat
+              className={`p-0 ${isDark ? "scanlines" : ""}`}
             >
               <div
                 className={`titlebar ${
@@ -58,6 +61,7 @@ export default function FrameworkMapping() {
             </RetroCard>
           );
         })}
+      </div>
       </div>
     </section>
   );

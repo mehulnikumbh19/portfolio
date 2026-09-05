@@ -22,7 +22,8 @@ export default function ProblemsSolved() {
               key={problem.title}
               delay={index * 0.04}
               tone={tone}
-              className={`p-5 ${isOrange ? "bg-orange" : ""}`}
+              flat
+              className={`p-5 ${isOrange ? "bg-orange" : ""} ${isDark ? "scanlines" : ""}`}
             >
               <div className="flex items-center gap-3">
                 <span

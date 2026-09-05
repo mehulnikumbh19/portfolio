@@ -14,7 +14,7 @@ import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-orange text-ink">
+    <div className="min-h-screen bg-page text-ink">
       <ScrollProgress />
       <Navbar />
       <main className="pt-32 sm:pt-36">

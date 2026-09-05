@@ -6,7 +6,7 @@ export default function Ticker() {
 
   return (
     <div
-      className="ticker border-y-[3px] border-ink bg-ink text-orange"
+      className="ticker text-orange"
       aria-label="Frameworks, platforms, and certifications"
     >
       <ul className="ticker__track">

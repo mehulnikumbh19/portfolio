@@ -9,10 +9,10 @@ export default function SectionTitle({
 }) {
   const titleSizeClass =
     size === "xl"
-      ? "text-[clamp(2.25rem,7vw,4.5rem)]"
+      ? "text-[clamp(2rem,6vw,3.4rem)]"
       : size === "md"
       ? "text-[clamp(1.5rem,4vw,2.5rem)]"
-      : "text-[clamp(2rem,6vw,3.75rem)]";
+      : "text-[clamp(1.75rem,5vw,3rem)]";
 
   return (
     <motion.div

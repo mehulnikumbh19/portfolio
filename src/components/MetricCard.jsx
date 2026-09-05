@@ -37,7 +37,7 @@ export default function MetricCard({ metric, delay = 0 }) {
   return (
     <RetroCard delay={delay} className="p-5 sm:p-6" tone="paper" hover>
       <div className="flex items-start justify-between gap-3">
-        <p className="pixel-heading text-[clamp(2rem,4.5vw,3rem)] text-ink">
+        <p className="pixel-display text-[clamp(1.5rem,3.2vw,2.25rem)] text-ink">
           <AnimatedNumber value={metric.value} suffix={metric.suffix} />
         </p>
         {Icon ? (

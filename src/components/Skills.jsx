@@ -4,14 +4,15 @@ import { skillGroups } from "../data/portfolioData";
 
 export default function Skills() {
   return (
-    <section id="skills" className="site-shell py-10 sm:py-14">
+    <section id="skills" className="band band-dark">
+      <div className="site-shell py-10 sm:py-14">
       <SectionTitle
         kicker="Toolbox"
         title="Skills"
         description="Four groups, straight from the resume."
       />
 
-      <div className="retro-card retro-card--dark overflow-hidden p-0">
+      <div className="retro-card retro-card--dark scanlines overflow-hidden p-0">
         <div className="titlebar bg-ink">
           <span>skills.cfg</span>
           <span className="titlebar-dots" aria-hidden="true">
@@ -30,7 +31,7 @@ export default function Skills() {
                 className="grid gap-4 p-5 sm:p-6 md:grid-cols-[0.32fr_1fr] md:items-start"
               >
                 <div className="flex items-center gap-3">
-                  <span className="grid h-10 w-10 place-items-center border-2 border-orange bg-coal text-orange">
+                  <span className="grid h-10 w-10 place-items-center border-2 border-orange bg-cream text-orange">
                     {Icon ? <Icon className="h-5 w-5" aria-hidden="true" /> : null}
                   </span>
                   <div>
@@ -40,7 +41,7 @@ export default function Skills() {
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {group.skills.map((skill) => (
-                    <Badge key={skill} tone="dark" className="border-orange">
+                    <Badge key={skill} tone="cream" className="border-orange">
                       {skill}
                     </Badge>
                   ))}
@@ -49,6 +50,7 @@ export default function Skills() {
             );
           })}
         </ul>
+      </div>
       </div>
     </section>
   );

@@ -13,6 +13,7 @@ import {
   X
 } from "lucide-react";
 import PixelAvatar from "./PixelAvatar";
+import ThemeToggle from "./ThemeToggle";
 import { navLinks, profile } from "../data/portfolioData";
 
 const iconForLink = {
@@ -109,6 +110,8 @@ export default function Navbar() {
               >
                 Resume
               </a>
+
+              <ThemeToggle />
 
               <button
                 type="button"

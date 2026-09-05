@@ -5,9 +5,15 @@ import RetroCard from "./RetroCard";
 export default function ExperienceCard({ item, index }) {
   const tone = index === 1 ? "dark" : index === 2 ? "cream" : "paper";
   const isDark = tone === "dark";
+  const isCurrent = /present/i.test(item.dates);
 
   return (
-    <RetroCard as="li" delay={index * 0.06} tone={tone} className="p-0">
+    <RetroCard
+      as="li"
+      delay={index * 0.06}
+      tone={tone}
+      className={`p-0 ${isDark ? "scanlines" : ""}`}
+    >
       <div
         className={`titlebar ${
           isDark ? "bg-orange text-ink" : "bg-ink text-paper"
@@ -17,7 +23,11 @@ export default function ExperienceCard({ item, index }) {
           <Briefcase className="h-3.5 w-3.5" aria-hidden="true" />
           {item.dates}
         </span>
-        <span className="pixel-label">{`Role 0${index + 1}`}</span>
+        {isCurrent ? (
+          <span className="pill-retro border-[#fffdf4] bg-violet text-[#fffdf4]">Current</span>
+        ) : (
+          <span className="pixel-label">{`Role 0${index + 1}`}</span>
+        )}
       </div>
       <div className={`p-5 ${isDark ? "text-paper" : "text-ink"} sm:p-6`}>
         <h3

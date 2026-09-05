@@ -1,4 +1,9 @@
 /** @type {import('tailwindcss').Config} */
+
+// Theme-able colors resolve to CSS variables defined in src/index.css so the
+// same utilities work in light mode, dark mode, and inside inverted bands.
+const themed = (name) => `rgb(var(--${name}-rgb) / <alpha-value>)`;
+
 export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
@@ -9,32 +14,33 @@ export default {
         sans: ['"Space Grotesk"', "Inter", "ui-sans-serif", "system-ui", "sans-serif"]
       },
       colors: {
+        page: themed("page"),
         orange: {
-          DEFAULT: "#ff9f3f",
-          deep: "#e8862a",
-          glow: "#ffb968"
+          DEFAULT: themed("orange"),
+          deep: themed("orange-deep"),
+          glow: themed("orange-glow")
         },
         cream: {
-          DEFAULT: "#eef0db",
-          light: "#f5f6e3"
+          DEFAULT: themed("cream"),
+          light: themed("cream-light")
         },
-        paper: "#fffdf4",
-        ink: "#050505",
-        coal: "#111111",
-        brown: "#3d352c",
-        rust: "#7a4d2a",
+        paper: themed("paper"),
+        ink: themed("ink"),
+        coal: themed("coal"),
+        brown: themed("brown"),
+        rust: themed("rust"),
         success: "#22c55e",
         risk: "#ef4444",
         warn: "#f59e0b",
         violet: "#7c3aed"
       },
       boxShadow: {
-        "pixel-sm": "3px 3px 0 #050505",
-        pixel: "6px 6px 0 #050505",
-        "pixel-lg": "8px 8px 0 #050505",
-        "pixel-xl": "10px 10px 0 #050505",
-        "pixel-cream": "6px 6px 0 #eef0db",
-        "pixel-orange": "6px 6px 0 #e8862a"
+        "pixel-sm": "3px 3px 0 var(--ink)",
+        pixel: "6px 6px 0 var(--ink)",
+        "pixel-lg": "8px 8px 0 var(--ink)",
+        "pixel-xl": "10px 10px 0 var(--ink)",
+        "pixel-cream": "6px 6px 0 var(--cream)",
+        "pixel-orange": "6px 6px 0 var(--orange-deep)"
       },
       transitionTimingFunction: {
         retro: "cubic-bezier(0.5, 0, 0.5, 1)"

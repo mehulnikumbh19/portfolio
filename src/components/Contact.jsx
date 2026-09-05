@@ -81,7 +81,7 @@ export default function Contact() {
           </div>
         </RetroCard>
 
-        <RetroCard tone="dark" hover={false} className="p-0">
+        <RetroCard tone="dark" hover={false} className="scanlines p-0">
           <div className="titlebar bg-orange text-ink">
             <span>send.message</span>
             <span className="pixel-label">channels</span>

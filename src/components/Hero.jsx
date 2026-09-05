@@ -23,9 +23,15 @@ export default function Hero() {
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: [0.5, 0, 0.5, 1] }}
-          className="flex w-full"
+          className="relative flex w-full"
         >
-          <div className="retro-card flex w-full flex-col overflow-hidden p-0">
+          <span
+            aria-hidden="true"
+            className="pixel-label absolute -right-3 top-5 z-10 rotate-6 border-[3px] border-ink bg-violet px-3 py-1.5 text-[#fffdf4] shadow-pixel-sm"
+          >
+            Open to roles
+          </span>
+          <div className="retro-card retro-corner flex w-full flex-col p-0">
             <div className="titlebar">
               <span>profile.exe</span>
               <span className="titlebar-dots" aria-hidden="true">
@@ -34,7 +40,7 @@ export default function Hero() {
                 <span />
               </span>
             </div>
-            <div className="halftone relative flex-1">
+            <div className="halftone relative flex-1 overflow-hidden">
               <img
                 src={avatarSrc}
                 alt="Mehul Nikumbh"
@@ -57,7 +63,7 @@ export default function Hero() {
           transition={{ duration: 0.4, ease: [0.5, 0, 0.5, 1] }}
           className="flex w-full"
         >
-          <RetroCard tone="paper" hover={false} className="flex w-full flex-col p-5 sm:p-7">
+          <RetroCard tone="paper" hover={false} corner className="flex w-full flex-col p-5 sm:p-7">
             <div className="flex flex-wrap items-center gap-3">
               <Badge tone="orange">Issue 01 . GRC</Badge>
               <Badge>Open to roles</Badge>
@@ -106,7 +112,7 @@ export default function Hero() {
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.4, ease: [0.5, 0, 0.5, 1] }}
       >
-        <div className="retro-card retro-card--dark overflow-hidden p-0">
+        <div className="retro-card retro-card--dark scanlines overflow-hidden p-0">
           <div className="titlebar bg-ink">
             <span>skills.matrix</span>
             <span className="titlebar-dots" aria-hidden="true">

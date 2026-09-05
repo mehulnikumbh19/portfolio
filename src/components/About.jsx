@@ -4,7 +4,8 @@ import { aboutCards } from "../data/portfolioData";
 
 export default function About() {
   return (
-    <section id="about" className="site-shell py-10 sm:py-14">
+    <section id="about" className="band band-cream">
+      <div className="site-shell py-10 sm:py-14">
       <SectionTitle
         kicker="About"
         title="About Me"
@@ -44,6 +45,7 @@ export default function About() {
                 key={card.title}
                 delay={index * 0.06}
                 tone={index % 2 === 0 ? "cream" : "paper"}
+                flat
                 className="p-5"
               >
                 <div className="flex items-center gap-3">
@@ -57,6 +59,7 @@ export default function About() {
             );
           })}
         </ul>
+      </div>
       </div>
     </section>
   );

@@ -162,7 +162,7 @@ export default function ProjectCard({ project, index }) {
   const PreviewComponent = preview?.Component;
 
   return (
-    <RetroCard delay={index * 0.05} tone={tone} className="p-0">
+    <RetroCard delay={index * 0.05} tone={tone} className={`p-0 ${isDark ? "scanlines" : ""}`}>
       <div
         className={`titlebar ${
           isDark ? "bg-orange text-ink" : "bg-ink text-paper"

@@ -4,7 +4,8 @@ import { experience } from "../data/portfolioData";
 
 export default function Experience() {
   return (
-    <section id="experience" className="site-shell py-10 sm:py-14">
+    <section id="experience" className="band band-cream">
+      <div className="site-shell py-10 sm:py-14">
       <SectionTitle
         kicker="Resume"
         title="Experience"
@@ -16,6 +17,7 @@ export default function Experience() {
           <ExperienceCard key={`${item.title}-${item.company}`} item={item} index={index} />
         ))}
       </ol>
+      </div>
     </section>
   );
 }

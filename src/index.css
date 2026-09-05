@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+ * Palette lives in CSS variables. Each color has a hex form (for plain CSS)
+ * and an RGB-triplet form (for Tailwind opacity modifiers). Three contexts
+ * redefine them: :root (light), [data-theme="dark"] (night shift), and
+ * .band-dark (an inverted section band in light mode).
+ */
 :root {
   color-scheme: light;
   font-synthesis: none;
@@ -9,20 +15,80 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  --page: #ff9f3f;
+  --page-rgb: 255 159 63;
+  --dot: rgba(5, 5, 5, 0.08);
+
   --orange: #ff9f3f;
+  --orange-rgb: 255 159 63;
   --orange-deep: #e8862a;
+  --orange-deep-rgb: 232 134 42;
   --orange-glow: #ffb968;
+  --orange-glow-rgb: 255 185 104;
   --cream: #eef0db;
+  --cream-rgb: 238 240 219;
   --cream-light: #f5f6e3;
+  --cream-light-rgb: 245 246 227;
   --paper: #fffdf4;
+  --paper-rgb: 255 253 244;
   --ink: #050505;
+  --ink-rgb: 5 5 5;
   --coal: #111111;
+  --coal-rgb: 17 17 17;
   --brown: #3d352c;
+  --brown-rgb: 61 53 44;
   --rust: #7a4d2a;
+  --rust-rgb: 122 77 42;
   --success: #22c55e;
   --risk: #ef4444;
   --warn: #f59e0b;
   --violet: #7c3aed;
+}
+
+/* Inverted band: dark surface, light ink, used for alternating sections. */
+.band-dark {
+  --paper: #050505;
+  --paper-rgb: 5 5 5;
+  --cream: #151515;
+  --cream-rgb: 21 21 21;
+  --cream-light: #1c1c1c;
+  --cream-light-rgb: 28 28 28;
+  --ink: #fffdf4;
+  --ink-rgb: 255 253 244;
+  --coal: #ebe6d8;
+  --coal-rgb: 235 230 216;
+  --brown: #d9d1c1;
+  --brown-rgb: 217 209 193;
+  --rust: #ffb968;
+  --rust-rgb: 255 185 104;
+  background-color: #050505;
+}
+
+/* Night shift. */
+:root[data-theme="dark"],
+:root[data-theme="dark"] .band-dark {
+  color-scheme: dark;
+  --page: #121110;
+  --page-rgb: 18 17 16;
+  --dot: rgba(255, 253, 244, 0.07);
+  --paper: #171614;
+  --paper-rgb: 23 22 20;
+  --cream: #201e1a;
+  --cream-rgb: 32 30 26;
+  --cream-light: #262420;
+  --cream-light-rgb: 38 36 32;
+  --ink: #f4efe2;
+  --ink-rgb: 244 239 226;
+  --coal: #e9e3d3;
+  --coal-rgb: 233 227 211;
+  --brown: #d9d1c1;
+  --brown-rgb: 217 209 193;
+  --rust: #ffb968;
+  --rust-rgb: 255 185 104;
+}
+
+:root[data-theme="dark"] .band-dark {
+  background-color: #0a0a09;
 }
 
 html {
@@ -32,14 +98,14 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background-color: var(--orange);
+  background-color: var(--page);
   color: var(--ink);
   font-family: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
   line-height: 1.55;
-  background-image:
-    radial-gradient(rgba(5, 5, 5, 0.08) 1px, transparent 1px);
+  background-image: radial-gradient(var(--dot) 1px, transparent 1px);
   background-size: 18px 18px;
   background-position: 0 0;
+  transition: background-color 200ms ease, color 200ms ease;
 }
 
 ::selection {
@@ -288,8 +354,21 @@ body {
     display: block;
   }
 
+  .band {
+    border-top: 3px solid var(--ink);
+    border-bottom: 3px solid var(--ink);
+  }
+
+  .band-cream {
+    background-color: var(--cream);
+  }
+
   .ticker {
     overflow: hidden;
+    /* Stays black in every theme; it's a hardware strip, not a surface. */
+    background-color: #050505;
+    border-top: 3px solid #050505;
+    border-bottom: 3px solid #050505;
   }
 
   .ticker__track {
