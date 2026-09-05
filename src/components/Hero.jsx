@@ -66,7 +66,6 @@ export default function Hero() {
           <RetroCard tone="paper" hover={false} corner className="flex w-full flex-col p-5 sm:p-7">
             <div className="flex flex-wrap items-center gap-3">
               <Badge tone="orange">Issue 01 . GRC</Badge>
-              <Badge>Open to roles</Badge>
             </div>
             <h1 className="pixel-display mt-6 text-[clamp(2rem,6vw,4rem)] text-ink">
               Mehul Nikumbh
@@ -84,8 +83,8 @@ export default function Hero() {
               {profile.education}
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <a className="btn-retro btn-retro--orange" href="#projects">
-                View Focus Areas <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              <a className="btn-retro btn-retro--orange" href="#experience">
+                View Experience <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </a>
               <a
                 className="btn-retro btn-retro--ghost"

@@ -7,7 +7,6 @@ import {
   Linkedin,
   Mail,
   Menu,
-  ShieldCheck,
   User,
   Wrench,
   X
@@ -21,13 +20,43 @@ const iconForLink = {
   About: User,
   Skills: Wrench,
   Experience: Briefcase,
-  "Focus Areas": ShieldCheck,
   Contact: Mail
 };
+
+const pad = (value) => String(value).padStart(2, "0");
+
+function Clock() {
+  const [now, setNow] = useState(() => new Date());
+
+  useEffect(() => {
+    const id = setInterval(() => setNow(new Date()), 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  const colon = now.getSeconds() % 2 === 0 ? "visible" : "invisible";
+
+  return (
+    <time
+      dateTime={now.toISOString()}
+      className="pixel-label hidden items-center gap-2 border-2 border-ink bg-cream px-2.5 py-1.5 text-ink md:inline-flex"
+      aria-label="Local time"
+    >
+      <span aria-hidden="true" className="h-2 w-2 animate-pulse bg-success" />
+      <span className="tabular-nums">
+        {pad(now.getHours())}
+        <span className={colon}>:</span>
+        {pad(now.getMinutes())}
+        <span className={colon}>:</span>
+        {pad(now.getSeconds())}
+      </span>
+    </time>
+  );
+}
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("home");
+  const [scrolled, setScrolled] = useState(false);
   const panelRef = useRef(null);
 
   useEffect(() => {
@@ -44,6 +73,13 @@ export default function Navbar() {
     );
     sections.forEach((section) => observer.observe(section));
     return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   useEffect(() => {
@@ -67,20 +103,44 @@ export default function Navbar() {
     };
   }, [open]);
 
+  const path = active === "home" ? "~" : `~/${active}`;
+
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      <div className="site-shell pt-4 sm:pt-6">
-        <div className="retro-card relative bg-paper p-3 sm:p-4">
+      <div
+        className={`site-shell transition-[padding] duration-200 ease-retro ${
+          scrolled ? "pt-2 sm:pt-3" : "pt-4 sm:pt-6"
+        }`}
+      >
+        <div
+          className={`retro-card relative bg-paper transition-[padding,box-shadow] duration-200 ease-retro ${
+            scrolled ? "p-2 shadow-pixel-sm sm:p-2.5" : "p-3 sm:p-4"
+          }`}
+        >
           <div className="flex items-center gap-3">
-            <div className="flex items-center gap-3">
-              <PixelAvatar size={48} className="shrink-0" />
+            <a href="#home" className="flex items-center gap-3" aria-label="Back to top">
+              <PixelAvatar size={scrolled ? 40 : 48} className="shrink-0 transition-all" />
               <div className="leading-tight">
                 <p className="pixel-heading text-[1.35rem] text-ink sm:text-[1.55rem]">
                   {profile.name}
                 </p>
-                <p className="pixel-label text-rust">Cloud Security & GRC</p>
+                <p className="pixel-label flex items-center gap-1.5 text-rust">
+                  <span>mehul@grc:</span>
+                  <AnimatePresence mode="popLayout" initial={false}>
+                    <motion.span
+                      key={path}
+                      initial={{ opacity: 0, y: 6 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -6 }}
+                      transition={{ duration: 0.18, ease: [0.5, 0, 0.5, 1] }}
+                      className="text-ink"
+                    >
+                      {path}
+                    </motion.span>
+                  </AnimatePresence>
+                </p>
               </div>
-            </div>
+            </a>
 
             <nav className="ml-auto hidden items-center gap-1 lg:flex" aria-label="Primary">
               {navLinks.map((link) => {
@@ -89,12 +149,19 @@ export default function Navbar() {
                   <a
                     key={link.href}
                     href={link.href}
-                    className={`pixel-label border-2 px-2.5 py-1.5 transition-colors duration-150 ease-retro ${
-                      isActive
-                        ? "border-ink bg-ink text-orange"
-                        : "border-transparent text-ink hover:border-ink hover:bg-orange"
+                    aria-current={isActive ? "page" : undefined}
+                    className={`pixel-label relative isolate border-2 border-transparent px-2.5 py-1.5 transition-colors duration-150 ease-retro ${
+                      isActive ? "text-orange" : "text-ink hover:border-ink hover:bg-orange"
                     }`}
                   >
+                    {isActive ? (
+                      <motion.span
+                        layoutId="nav-marker"
+                        aria-hidden="true"
+                        className="absolute inset-[-2px] -z-10 border-2 border-ink bg-ink"
+                        transition={{ type: "spring", stiffness: 420, damping: 34 }}
+                      />
+                    ) : null}
                     {link.label}
                   </a>
                 );
@@ -102,6 +169,8 @@ export default function Navbar() {
             </nav>
 
             <div className="ml-auto flex items-center gap-2 lg:ml-3">
+              <Clock />
+
               <a
                 className="btn-retro btn-retro--orange hidden text-[1rem] sm:inline-flex"
                 href={profile.resume}

@@ -1,12 +1,9 @@
 import {
   AlertTriangle,
-  Award,
-  BarChart3,
   BookOpen,
   Bot,
   ClipboardCheck,
   Cloud,
-  Database,
   FileCheck2,
   FileSpreadsheet,
   Fingerprint,
@@ -14,7 +11,6 @@ import {
   GraduationCap,
   KeyRound,
   Layers3,
-  Radar,
   ShieldCheck,
   ShieldHalf,
   Siren,
@@ -34,7 +30,7 @@ export const profile = {
     "M.S. Information Systems (Cybersecurity) @ California State University, Long Beach, May 2026",
   availability:
     "Open to Cloud Security, GRC, IT Risk, and Security Compliance opportunities.",
-  email: "mnikumbh19@gmail.com",
+  email: "mehul.n@itjobinbox.com",
   location: "California, USA",
   linkedin: "https://www.linkedin.com/in/mehulnikumbh/",
   github: "https://github.com/mehulnikumbh19",
@@ -89,31 +85,20 @@ export const navLinks = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
-  { label: "Focus Areas", href: "#projects" },
   { label: "Contact", href: "#contact" }
 ];
 
-export const aboutCards = [
-  {
-    title: "Cloud & Control Evidence",
-    icon: Database,
-    text: "CSPM findings, cloud configuration exports, IAM assignments, audit logs, and control documentation across AWS, Azure, and GCP"
-  },
-  {
-    title: "Risk Translation",
-    icon: BarChart3,
-    text: "Likelihood, impact, residual risk, control gaps, and remediation ownership across cloud and ITGC controls"
-  },
-  {
-    title: "Audit Readiness",
-    icon: FileCheck2,
-    text: "ISO 27001 SoA evidence, ServiceNow IRM tracking, control mapping, and stakeholder-ready reporting"
-  },
-  {
-    title: "Certifications",
-    icon: Award,
-    text: "AWS Certified Cloud Practitioner, Microsoft SC-900, Google Cybersecurity Professional, Microsoft AZ-900"
-  }
+// Rendered neofetch-style in the About section: "key: value" lines.
+export const aboutSpecs = [
+  { key: "role:", value: "GRC Analyst @ BlackRock" },
+  { key: "uptime:", value: "3+ yrs cloud security & GRC" },
+  { key: "clouds:", value: "AWS . Azure . GCP" },
+  { key: "frameworks:", value: "ISO 27001 . NIST CSF . SOC 2 . CIS" },
+  { key: "identity:", value: "Entra ID . AWS IAM . SAP GRC" },
+  { key: "tooling:", value: "ServiceNow IRM . Terraform . Power BI" },
+  { key: "certs:", value: "AWS CCP . SC-900 . AZ-900 . Google Cyber" },
+  { key: "degree:", value: "M.S. Info Systems (Cybersecurity), CSULB" },
+  { key: "base:", value: "California, USA" }
 ];
 
 export const problems = [
@@ -264,63 +249,6 @@ export const metrics = [
   { label: "Cloud Platforms (AWS / Azure / GCP)", value: 3, suffix: "", icon: Cloud },
   { label: "Compliance Frameworks & Standards", value: 8, suffix: "", icon: BookOpen },
   { label: "Industry Certifications", value: 4, suffix: "", icon: GraduationCap }
-];
-
-export const projects = [
-  {
-    name: "CSPM",
-    icon: Radar,
-    subtitle: "Multi-Cloud Posture & Control Gap Triage",
-    description:
-      "Triage of posture findings across AWS, Azure, and GCP, from Security Group and NSG rule sets to KMS and Key Vault encryption evidence for SOC 1 / SOC 2.",
-    tags: ["CSPM", "AWS", "Azure", "GCP", "AWS KMS", "Azure Key Vault"],
-    links: {}
-  },
-  {
-    name: "IaC Guardrails",
-    icon: Layers3,
-    subtitle: "Terraform, Kubernetes & Policy Enforcement",
-    description:
-      "Security review of Terraform pull requests and Kubernetes workloads, checked against Azure Policy, AWS SCP, and OPA Gatekeeper guardrails.",
-    tags: ["Terraform", "Kubernetes", "Azure Policy", "AWS SCPs", "OPA Gatekeeper"],
-    links: {}
-  },
-  {
-    name: "Cloud IAM",
-    icon: KeyRound,
-    subtitle: "AWS IAM, Entra ID & SAP GRC Access Governance",
-    description:
-      "Access certification across AWS IAM, Microsoft Entra ID, and SAP GRC: service principals, orphaned identities, standing privileges, and SoD conflicts.",
-    tags: ["AWS IAM", "Microsoft Entra ID", "SAP GRC", "SoD", "Access Certification"],
-    links: {}
-  },
-  {
-    name: "AI Governance",
-    icon: Bot,
-    subtitle: "AI/LLM Use-Case Inventory & Guardrail Testing",
-    description:
-      "AI/LLM use-case inventory, risk-intake assessments, and prompt-injection and guardrail testing mapped to NIST AI RMF, ISO 42001, and the EU AI Act.",
-    tags: ["NIST AI RMF", "ISO 42001", "EU AI Act", "Prompt-Injection Testing", "AI Risk"],
-    links: {}
-  },
-  {
-    name: "Audit Readiness",
-    icon: FileCheck2,
-    subtitle: "ISO 27001, ITGC & Evidence Management",
-    description:
-      "ISO 27001 Statement of Applicability evidence, ITGC control testing, and ServiceNow IRM / CMDB control mapping with remediation tracked to closure.",
-    tags: ["ISO 27001", "ITGC", "ServiceNow IRM", "ServiceNow CMDB", "Audit Readiness"],
-    links: {}
-  },
-  {
-    name: "Third-Party Risk",
-    icon: UsersRound,
-    subtitle: "Vendor Due Diligence & Regulatory Reporting",
-    description:
-      "Client due-diligence questionnaires, SOC 2 Type II and ISO 27001 vendor reviews, and GDPR, DPDP Act, and CERT-In reporting in Power BI and Excel.",
-    tags: ["Third-Party Risk", "GDPR", "DPDP Act", "CERT-In", "Power BI", "Risk Register"],
-    links: {}
-  }
 ];
 
 export const frameworks = [
