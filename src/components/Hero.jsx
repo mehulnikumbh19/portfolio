@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Download, Mail } from "lucide-react";
 import Badge from "./Badge";
-import PixelAvatar from "./PixelAvatar";
 import RetroCard from "./RetroCard";
 import TerminalTyper from "./TerminalTyper";
 import { heroSkills, profile } from "../data/portfolioData";
@@ -123,15 +122,20 @@ export default function Hero() {
           <div className="p-5 sm:p-6">
             <p className="pixel-label text-orange">Core stack</p>
             <ul className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
-              {heroSkills.map((skill) => (
-                <li
-                  key={skill}
-                  className="flex items-center gap-2 border-2 border-orange bg-coal px-3 py-2 text-paper"
-                >
-                  <PixelAvatar size={18} />
-                  <span className="pixel-heading text-[1.25rem]">{skill}</span>
-                </li>
-              ))}
+              {heroSkills.map((skill) => {
+                const Icon = skill.icon;
+                return (
+                  <li
+                    key={skill.label}
+                    className="flex items-center gap-2.5 border-2 border-orange bg-coal px-3 py-2 text-paper"
+                  >
+                    <span className="grid h-7 w-7 shrink-0 place-items-center border-2 border-orange bg-ink text-orange">
+                      <Icon className="h-4 w-4" aria-hidden="true" />
+                    </span>
+                    <span className="pixel-heading text-[1.25rem]">{skill.label}</span>
+                  </li>
+                );
+              })}
             </ul>
             <a
               href="#contact"

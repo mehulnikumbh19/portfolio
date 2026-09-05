@@ -72,12 +72,12 @@ export const tickerItems = [
 ];
 
 export const heroSkills = [
-  "CSPM & Cloud Security",
-  "ISO 27001",
-  "SOC 2",
-  "Cloud IAM Governance",
-  "ITGC Control Testing",
-  "AI/LLM Risk Governance"
+  { label: "CSPM & Cloud Security", icon: Cloud },
+  { label: "ISO 27001", icon: ShieldCheck },
+  { label: "SOC 2", icon: FileCheck2 },
+  { label: "Cloud IAM Governance", icon: KeyRound },
+  { label: "ITGC Control Testing", icon: ClipboardCheck },
+  { label: "AI/LLM Risk Governance", icon: Bot }
 ];
 
 export const navLinks = [
