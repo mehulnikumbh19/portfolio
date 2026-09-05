@@ -4,7 +4,7 @@ import { metrics } from "../data/portfolioData";
 
 export default function Metrics() {
   return (
-    <section className="site-shell py-14 sm:py-20">
+    <section className="site-shell py-10 sm:py-14">
       <SectionTitle
         kicker="Stats"
         title="Tallies from the work."

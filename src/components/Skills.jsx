@@ -4,11 +4,11 @@ import { skillGroups } from "../data/portfolioData";
 
 export default function Skills() {
   return (
-    <section id="skills" className="site-shell py-14 sm:py-20">
+    <section id="skills" className="site-shell py-10 sm:py-14">
       <SectionTitle
         kicker="Toolbox"
         title="Skills"
-        description="Governance depth with technical security context. Categorized for hiring panels and recruiters."
+        description="Four groups, straight from the resume."
       />
 
       <div className="retro-card retro-card--dark overflow-hidden p-0">

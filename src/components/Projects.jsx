@@ -4,7 +4,7 @@ import { projects } from "../data/portfolioData";
 
 export default function Projects() {
   return (
-    <section id="projects" className="site-shell py-14 sm:py-20">
+    <section id="projects" className="site-shell py-10 sm:py-14">
       <SectionTitle
         kicker="Focus Areas"
         title="Where I Spend My Time"

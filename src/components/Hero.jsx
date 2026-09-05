@@ -3,6 +3,7 @@ import { ArrowRight, Download, Mail } from "lucide-react";
 import Badge from "./Badge";
 import PixelAvatar from "./PixelAvatar";
 import RetroCard from "./RetroCard";
+import TerminalTyper from "./TerminalTyper";
 import { heroSkills, profile } from "../data/portfolioData";
 
 const fadeUp = {
@@ -14,7 +15,7 @@ const avatarSrc = `${import.meta.env.BASE_URL}avatar.jpg`;
 
 export default function Hero() {
   return (
-    <section id="home" className="site-shell flex flex-col gap-6 pb-16 pt-2 sm:pt-4">
+    <section id="home" className="site-shell flex flex-col gap-6 pb-10 pt-2 sm:pt-4">
       <div className="grid items-stretch gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.4fr)] lg:gap-8">
 
         {/* Photo */}
@@ -138,17 +139,15 @@ export default function Hero() {
         </div>
       </motion.div>
 
-      {/* Availability — full width */}
+      {/* Live terminal — full width */}
       <motion.div
         variants={fadeUp}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.4, ease: [0.5, 0, 0.5, 1] }}
-        className="retro-card flex items-center gap-3 bg-cream p-3 sm:p-4"
       >
-        <span aria-hidden="true" className="h-2.5 w-2.5 shrink-0 bg-success" />
-        <p className="pixel-label text-ink">{profile.availability}</p>
+        <TerminalTyper />
       </motion.div>
     </section>
   );

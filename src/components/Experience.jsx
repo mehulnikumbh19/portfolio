@@ -4,7 +4,7 @@ import { experience } from "../data/portfolioData";
 
 export default function Experience() {
   return (
-    <section id="experience" className="site-shell py-14 sm:py-20">
+    <section id="experience" className="site-shell py-10 sm:py-14">
       <SectionTitle
         kicker="Resume"
         title="Experience"

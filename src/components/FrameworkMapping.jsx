@@ -6,14 +6,14 @@ const tonePalette = ["paper", "cream", "dark", "paper", "cream", "dark", "paper"
 
 export default function FrameworkMapping() {
   return (
-    <section className="site-shell py-14 sm:py-20">
+    <section className="site-shell py-10 sm:py-14">
       <SectionTitle
         kicker="References"
         title="Frameworks"
-        description="Each reference standard, paired with the practical evidence and remediation work it implies."
+        description="Eight standards from the resume, each paired with the work it backed."
       />
 
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {frameworks.map((framework, index) => {
           const tone = tonePalette[index % tonePalette.length];
           const isDark = tone === "dark";
@@ -48,22 +48,12 @@ export default function FrameworkMapping() {
                   {framework.use}
                 </p>
                 <p
-                  className={`mt-4 text-[0.93rem] leading-relaxed ${
+                  className={`mt-3 text-[0.93rem] leading-relaxed ${
                     isDark ? "text-paper/85" : "text-brown"
                   }`}
                 >
                   {framework.work}
                 </p>
-                <div
-                  className={`mt-4 border-2 px-3 py-2 ${
-                    isDark
-                      ? "border-orange bg-coal text-paper/90"
-                      : "border-ink bg-paper text-ink"
-                  }`}
-                >
-                  <p className="pixel-label">Example domains</p>
-                  <p className="mt-1 text-[0.9rem]">{framework.examples}</p>
-                </div>
               </div>
             </RetroCard>
           );

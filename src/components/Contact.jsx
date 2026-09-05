@@ -36,7 +36,7 @@ const buttons = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="site-shell py-14 sm:py-20">
+    <section id="contact" className="site-shell py-10 sm:py-14">
       <SectionTitle
         kicker="Sign-off"
         title="Let's build audit-ready security programs."

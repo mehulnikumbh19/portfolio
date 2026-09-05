@@ -20,7 +20,7 @@ export default function SectionTitle({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.35 }}
       transition={{ duration: 0.5, ease: [0.5, 0, 0.5, 1] }}
-      className={`mb-10 ${align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}`}
+      className={`mb-8 ${align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}`}
     >
       {kicker ? (
         <p className="pill-retro pill-retro--orange mb-4">{kicker}</p>

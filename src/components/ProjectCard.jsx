@@ -231,19 +231,21 @@ export default function ProjectCard({ project, index }) {
           </ul>
         ) : null}
 
-        <ul className="mt-5 space-y-2.5 text-[0.93rem] leading-relaxed">
-          {project.bullets.map((bullet) => (
-            <li key={bullet} className="flex gap-2.5">
-              <span
-                aria-hidden="true"
-                className={`mt-1.5 h-2.5 w-2.5 shrink-0 ${
-                  isDark ? "bg-orange" : "bg-ink"
-                }`}
-              />
-              <span className={isDark ? "text-paper/90" : "text-brown"}>{bullet}</span>
-            </li>
-          ))}
-        </ul>
+        {project.bullets?.length ? (
+          <ul className="mt-5 space-y-2.5 text-[0.93rem] leading-relaxed">
+            {project.bullets.map((bullet) => (
+              <li key={bullet} className="flex gap-2.5">
+                <span
+                  aria-hidden="true"
+                  className={`mt-1.5 h-2.5 w-2.5 shrink-0 ${
+                    isDark ? "bg-orange" : "bg-ink"
+                  }`}
+                />
+                <span className={isDark ? "text-paper/90" : "text-brown"}>{bullet}</span>
+              </li>
+            ))}
+          </ul>
+        ) : null}
 
         <div className="mt-5 flex flex-wrap gap-2">
           {project.tags.map((tag) => (

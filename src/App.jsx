@@ -1,5 +1,7 @@
+import ScrollProgress from "./components/ScrollProgress";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Ticker from "./components/Ticker";
 import Metrics from "./components/Metrics";
 import About from "./components/About";
 import Skills from "./components/Skills";
@@ -13,9 +15,11 @@ import Footer from "./components/Footer";
 export default function App() {
   return (
     <div className="min-h-screen bg-orange text-ink">
+      <ScrollProgress />
       <Navbar />
       <main className="pt-32 sm:pt-36">
         <Hero />
+        <Ticker />
         <Metrics />
         <About />
         <Skills />

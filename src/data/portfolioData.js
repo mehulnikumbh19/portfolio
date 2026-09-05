@@ -29,7 +29,7 @@ export const profile = {
   heroHeadline:
     "Cloud security evidence, control testing, and audit readiness across AWS, Azure, and GCP.",
   summary:
-    "GRC and Cloud Security Analyst with 3+ years of experience specializing in ITGC, control testing, cloud risk assessments, audit readiness, and security compliance across AWS, Azure, and GCP environments. Strong expertise in ISO 27001, NIST CSF, SOC 2, IAM, CSPM, ServiceNow IRM, SAP GRC, and cloud security governance, with hands-on experience in risk remediation, access reviews, and third-party risk.",
+    "3+ years turning cloud security evidence into audit-ready risk decisions. ISO 27001, NIST CSF, SOC 2, CSPM, IAM, ServiceNow IRM, and SAP GRC across AWS, Azure, and GCP.",
   education:
     "M.S. Information Systems (Cybersecurity) @ California State University, Long Beach, May 2026",
   availability:
@@ -40,6 +40,40 @@ export const profile = {
   github: "https://github.com/mehulnikumbh19",
   resume: `${import.meta.env.BASE_URL}Mehul_Nikumbh_Resume.pdf`
 };
+
+export const terminalLines = [
+  "triaging cspm findings :: aws / azure / gcp",
+  "validating kms + key vault encryption evidence",
+  "reviewing entra id + aws iam access certifications",
+  "mapping ai/llm controls :: nist ai rmf / iso 42001",
+  "status :: open to cloud security & grc roles"
+];
+
+export const tickerItems = [
+  "ISO 27001",
+  "SOC 2",
+  "NIST CSF",
+  "CIS Controls",
+  "AWS",
+  "Azure",
+  "GCP",
+  "CSPM",
+  "Entra ID",
+  "SAP GRC",
+  "ServiceNow IRM",
+  "Terraform",
+  "Kubernetes",
+  "AWS Cloud Practitioner",
+  "Microsoft SC-900",
+  "Microsoft AZ-900",
+  "Google Cybersecurity",
+  "NIST AI RMF",
+  "ISO 42001",
+  "GDPR",
+  "DPDP Act",
+  "CERT-In",
+  "IEC 62443"
+];
 
 export const heroSkills = [
   "CSPM & Cloud Security",
@@ -87,37 +121,37 @@ export const problems = [
     title: "Cloud Misconfiguration & CSPM Gaps",
     icon: AlertTriangle,
     description:
-      "Triaging CSPM findings across AWS, Azure, and GCP, validating affected configurations, and closing control gaps with clear evidence and ownership."
+      "CSPM triage across AWS, Azure, and GCP with gaps documented, owned, and closed."
   },
   {
     title: "Cloud IAM & Access Governance",
     icon: KeyRound,
     description:
-      "Reviewing AWS IAM and Microsoft Entra ID assignments, orphaned identities, and standing privileges to support periodic access certification."
+      "Entra ID and AWS IAM reviews: orphaned identities, standing privileges, access certification."
   },
   {
     title: "Insecure IaC & Container Deployments",
     icon: Layers3,
     description:
-      "Reviewing Terraform pull requests and Kubernetes configurations against guardrail policies like Azure Policy, AWS SCPs, and OPA Gatekeeper."
+      "Terraform and Kubernetes review against Azure Policy, AWS SCP, and OPA Gatekeeper guardrails."
   },
   {
     title: "ITGC & Audit Evidence Gaps",
     icon: FileCheck2,
     description:
-      "Maintaining ISO 27001 SoA evidence, executing ITGC control testing, and tracking remediation to closure with control owners."
+      "ISO 27001 SoA evidence, ITGC control testing, and remediation tracked to closure."
   },
   {
     title: "Third-Party & Vendor Risk Blind Spots",
     icon: UsersRound,
     description:
-      "Assessing SOC 2 Type II reports, ISO 27001 certifications, and client due-diligence questionnaires to support vendor security decisions."
+      "SOC 2 Type II, ISO 27001 certificate, and due-diligence questionnaire reviews."
   },
   {
     title: "Emerging AI/LLM Governance Gaps",
     icon: Bot,
     description:
-      "Maintaining AI/LLM use-case inventories and running prompt-injection and guardrail testing mapped to NIST AI RMF, ISO 42001, and the EU AI Act."
+      "AI use-case inventory plus prompt-injection and guardrail tests mapped to NIST AI RMF and ISO 42001."
   }
 ];
 
@@ -199,12 +233,12 @@ export const experience = [
     location: "CA",
     tags: ["CSPM", "AWS", "Azure", "GCP", "Terraform", "Kubernetes", "Microsoft Entra ID", "AI/LLM Governance"],
     bullets: [
-      "Triage Cloud Security Posture Management (CSPM) findings across AWS, Azure, and GCP environments, validating affected configurations, documenting control gaps, and tracking remediation through closure in coordination with control owners.",
-      "Review AWS Security Group and Azure Network Security Group (NSG) rule sets, cloud segmentation, and micro-segmentation configurations to identify control deviations and validate encryption controls, including AWS KMS, Azure Key Vault, key-rotation, TLS, and data-at-rest encryption for SOC 1, SOC 2, and regulatory evidence collection.",
-      "Perform security reviews of Terraform pull requests, triage container and Kubernetes security findings (misconfigured pods, overly permissive RBAC, exposed dashboards), and assess guardrail configurations including Azure Policy, AWS SCPs, and OPA Gatekeeper policies.",
-      "Review AWS IAM and Microsoft Entra ID access assignments, including service principals, service accounts, orphaned identities, and excessive/standing privileges, supporting periodic cloud access certification campaigns and access-review processes.",
-      "Support Aladdin client security due-diligence questionnaires, map cloud configurations to applicable security controls, and assist in cloud audit log collection (AWS CloudTrail, Azure Monitor, GCP audit logs) for incident timeline reconstruction and regulatory control testing.",
-      "Maintain AI/LLM use-case inventory, support AI risk-intake assessments, verify AI data-flow and data-minimization practices, execute prompt-injection and AI guardrail testing based on predefined test plans, and map controls against NIST AI RMF, ISO 42001, and EU AI Act requirements."
+      "Triage CSPM findings across AWS, Azure, and GCP; validate configurations, document control gaps, and track remediation to closure.",
+      "Review AWS Security Group and Azure NSG rule sets, segmentation, and encryption controls (KMS, Key Vault, TLS, key rotation) for SOC 1 / SOC 2 evidence.",
+      "Security-review Terraform pull requests and Kubernetes findings (pod misconfigs, permissive RBAC); assess Azure Policy, AWS SCP, and OPA Gatekeeper guardrails.",
+      "Review AWS IAM and Entra ID assignments, service principals, orphaned identities, and standing privileges for access certification campaigns.",
+      "Support Aladdin client due-diligence questionnaires and collect CloudTrail, Azure Monitor, and GCP audit logs for incident timelines and control testing.",
+      "Maintain the AI/LLM use-case inventory, run prompt-injection and guardrail tests, and map controls to NIST AI RMF, ISO 42001, and the EU AI Act."
     ]
   },
   {
@@ -215,13 +249,12 @@ export const experience = [
     location: "India",
     tags: ["ISO 27001", "ITGC", "ServiceNow IRM", "SAP GRC", "SoD", "GDPR", "DPDP Act", "CERT-In"],
     bullets: [
-      "Maintained ISO 27001 security documentation and Statement of Applicability (SoA) evidence for cloud and security controls, supporting audit readiness and compliance reviews.",
-      "Executed assigned cloud security and ITGC control testing by collecting evidence, reviewing configurations, documenting control observations, and tracking remediation activities with control owners.",
-      "Administered ServiceNow IRM and CMDB activities involving cloud-related asset inventory, classification, control mapping, and security documentation while coordinating quarterly access recertification activities.",
-      "Reviewed SAP GRC Access Control results, Microsoft Entra access, segregation-of-duties (SoD) conflicts, mitigating controls, and firefighter access as part of established identity and access governance processes.",
-      "Managed cloud-security risk-register updates and assisted with system and project risk assessments, security exceptions, compensating controls, risk treatment, and remediation tracking.",
-      "Assessed third-party and supplier security documentation, including SOC 2 Type II reports and ISO 27001 certifications, supporting cloud vendor security due diligence and compliance reviews.",
-      "Coordinated GDPR, DPDP Act, and CERT-In compliance activities while preparing cloud-security KPI reporting through Power BI and Excel, and assisting with ISO 27001 internal and surveillance audit activities."
+      "Maintained ISO 27001 documentation and Statement of Applicability evidence; supported internal and surveillance audits.",
+      "Executed cloud security and ITGC control testing: evidence collection, configuration review, observations, and remediation tracking.",
+      "Administered ServiceNow IRM and CMDB asset inventory, classification, and control mapping; coordinated quarterly access recertification.",
+      "Reviewed SAP GRC Access Control results, Entra access, SoD conflicts, mitigating controls, and firefighter access.",
+      "Managed the cloud-security risk register, security exceptions, compensating controls, and third-party SOC 2 Type II / ISO 27001 reviews.",
+      "Coordinated GDPR, DPDP Act, and CERT-In compliance and built cloud-security KPI reporting in Power BI and Excel."
     ]
   }
 ];
@@ -239,12 +272,7 @@ export const projects = [
     icon: Radar,
     subtitle: "Multi-Cloud Posture & Control Gap Triage",
     description:
-      "Continuous triage of Cloud Security Posture Management findings across AWS, Azure, and GCP, validating misconfigurations, documenting control gaps, and driving remediation through closure with control owners.",
-    bullets: [
-      "Triage CSPM findings across AWS, Azure, and GCP, validating affected configurations and documenting control gaps.",
-      "Review AWS Security Groups, Azure NSG rule sets, and micro-segmentation configurations for control deviations.",
-      "Validate encryption controls, including AWS KMS, Azure Key Vault, key rotation, TLS, and data-at-rest encryption, for SOC 1, SOC 2, and regulatory evidence."
-    ],
+      "Triage of posture findings across AWS, Azure, and GCP, from Security Group and NSG rule sets to KMS and Key Vault encryption evidence for SOC 1 / SOC 2.",
     tags: ["CSPM", "AWS", "Azure", "GCP", "AWS KMS", "Azure Key Vault"],
     links: {}
   },
@@ -253,12 +281,7 @@ export const projects = [
     icon: Layers3,
     subtitle: "Terraform, Kubernetes & Policy Enforcement",
     description:
-      "Security review of Terraform pull requests and Kubernetes workloads, assessing guardrail policy configurations that keep infrastructure-as-code changes within approved security baselines.",
-    bullets: [
-      "Perform security reviews of Terraform pull requests before infrastructure changes are promoted.",
-      "Triage container and Kubernetes security findings, including misconfigured pods, overly permissive RBAC, and exposed dashboards.",
-      "Assess guardrail configurations including Azure Policy, AWS SCPs, and OPA Gatekeeper policies."
-    ],
+      "Security review of Terraform pull requests and Kubernetes workloads, checked against Azure Policy, AWS SCP, and OPA Gatekeeper guardrails.",
     tags: ["Terraform", "Kubernetes", "Azure Policy", "AWS SCPs", "OPA Gatekeeper"],
     links: {}
   },
@@ -267,12 +290,7 @@ export const projects = [
     icon: KeyRound,
     subtitle: "AWS IAM, Entra ID & SAP GRC Access Governance",
     description:
-      "End-to-end identity governance spanning AWS IAM, Microsoft Entra ID, and SAP GRC Access Control, covering periodic access certification, segregation-of-duties review, and privileged access oversight.",
-    bullets: [
-      "Review AWS IAM and Microsoft Entra ID access assignments, including service principals, orphaned identities, and standing privileges.",
-      "Review SAP GRC Access Control results, segregation-of-duties conflicts, mitigating controls, and firefighter access.",
-      "Support periodic cloud access certification campaigns and quarterly access recertification activities."
-    ],
+      "Access certification across AWS IAM, Microsoft Entra ID, and SAP GRC: service principals, orphaned identities, standing privileges, and SoD conflicts.",
     tags: ["AWS IAM", "Microsoft Entra ID", "SAP GRC", "SoD", "Access Certification"],
     links: {}
   },
@@ -281,12 +299,7 @@ export const projects = [
     icon: Bot,
     subtitle: "AI/LLM Use-Case Inventory & Guardrail Testing",
     description:
-      "Maintains the enterprise AI/LLM use-case inventory, executes AI risk-intake assessments, and runs prompt-injection and guardrail testing mapped to emerging AI governance frameworks.",
-    bullets: [
-      "Maintain AI/LLM use-case inventory and support AI risk-intake assessments.",
-      "Verify AI data-flow and data-minimization practices, and execute prompt-injection and AI guardrail testing based on predefined test plans.",
-      "Map controls against NIST AI RMF, ISO 42001, and EU AI Act requirements."
-    ],
+      "AI/LLM use-case inventory, risk-intake assessments, and prompt-injection and guardrail testing mapped to NIST AI RMF, ISO 42001, and the EU AI Act.",
     tags: ["NIST AI RMF", "ISO 42001", "EU AI Act", "Prompt-Injection Testing", "AI Risk"],
     links: {}
   },
@@ -295,12 +308,7 @@ export const projects = [
     icon: FileCheck2,
     subtitle: "ISO 27001, ITGC & Evidence Management",
     description:
-      "Maintained ISO 27001 documentation and Statement of Applicability evidence while executing ITGC control testing, evidence collection, and remediation tracking with control owners.",
-    bullets: [
-      "Maintained ISO 27001 security documentation and SoA evidence for cloud and security controls, supporting audit readiness.",
-      "Executed cloud security and ITGC control testing by collecting evidence, reviewing configurations, and documenting observations.",
-      "Administered ServiceNow IRM and CMDB activities, including asset inventory, classification, and control mapping."
-    ],
+      "ISO 27001 Statement of Applicability evidence, ITGC control testing, and ServiceNow IRM / CMDB control mapping with remediation tracked to closure.",
     tags: ["ISO 27001", "ITGC", "ServiceNow IRM", "ServiceNow CMDB", "Audit Readiness"],
     links: {}
   },
@@ -309,12 +317,7 @@ export const projects = [
     icon: UsersRound,
     subtitle: "Vendor Due Diligence & Regulatory Reporting",
     description:
-      "Supported client and vendor security due-diligence reviews, cloud-security risk-register updates, and GDPR, DPDP Act, and CERT-In compliance reporting through Power BI and Excel.",
-    bullets: [
-      "Support client security due-diligence questionnaires and map cloud configurations to applicable security controls.",
-      "Assessed third-party and supplier security documentation, including SOC 2 Type II reports and ISO 27001 certifications.",
-      "Coordinated GDPR, DPDP Act, and CERT-In compliance activities while preparing cloud-security KPI reporting through Power BI and Excel."
-    ],
+      "Client due-diligence questionnaires, SOC 2 Type II and ISO 27001 vendor reviews, and GDPR, DPDP Act, and CERT-In reporting in Power BI and Excel.",
     tags: ["Third-Party Risk", "GDPR", "DPDP Act", "CERT-In", "Power BI", "Risk Register"],
     links: {}
   }
@@ -323,51 +326,43 @@ export const projects = [
 export const frameworks = [
   {
     name: "ISO 27001",
-    use: "Information security management system audit readiness",
-    work: "Maintained security documentation and Statement of Applicability (SoA) evidence; supported internal and surveillance audits.",
-    examples: "SoA evidence, Annex A controls, surveillance audits"
+    use: "ISMS audit readiness",
+    work: "SoA evidence, security documentation, internal and surveillance audits."
   },
   {
     name: "NIST CSF",
-    use: "Cybersecurity governance and risk communication",
-    work: "Applied Identify, Protect, Detect, Respond, and Recover functions to structure cloud and cybersecurity risk assessments.",
-    examples: "Govern, Identify, Protect, Detect, Respond, Recover"
+    use: "Governance and risk communication",
+    work: "Identify, Protect, Detect, Respond, Recover structure for cloud risk assessments."
   },
   {
     name: "SOC 2",
-    use: "Trust services evidence for cloud and vendor security",
-    work: "Validated encryption, access, and monitoring controls for SOC 1 and SOC 2 evidence collection; reviewed vendor SOC 2 Type II reports.",
-    examples: "Security, availability, confidentiality criteria"
+    use: "Trust services evidence",
+    work: "Encryption, access, and monitoring evidence; vendor SOC 2 Type II reviews."
   },
   {
     name: "CIS Controls",
-    use: "Practical security hardening baseline",
-    work: "Benchmarked cloud and system configurations against CIS Controls during control testing and evidence review.",
-    examples: "Secure configuration, access control, logging"
+    use: "Hardening baseline",
+    work: "Cloud and system configurations benchmarked during control testing."
   },
   {
     name: "GDPR",
-    use: "EU data protection and privacy compliance",
-    work: "Coordinated GDPR compliance activities alongside cloud security and data-handling reviews.",
-    examples: "Data protection, cross-border transfer, privacy rights"
+    use: "EU data protection",
+    work: "Compliance coordination alongside cloud data-handling reviews."
   },
   {
     name: "DPDP Act",
-    use: "India Digital Personal Data Protection compliance",
-    work: "Coordinated DPDP Act compliance activities as part of regional data-protection obligations.",
-    examples: "Consent management, data fiduciary duties"
+    use: "India data protection",
+    work: "Regional data-protection compliance coordination."
   },
   {
     name: "CERT-In",
-    use: "Indian cybersecurity incident reporting mandate",
-    work: "Supported CERT-In compliance activities and incident-reporting readiness.",
-    examples: "Incident reporting, log retention"
+    use: "Incident reporting mandate",
+    work: "Compliance activities and incident-reporting readiness."
   },
   {
     name: "IEC 62443",
-    use: "Industrial and operational technology security",
-    work: "Applied IEC 62443 security concepts as part of broader compliance framework coverage for operational technology environments.",
-    examples: "Zones and conduits, OT security levels"
+    use: "OT and industrial security",
+    work: "Security concepts applied to operational technology coverage."
   }
 ];
 

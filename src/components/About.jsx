@@ -4,7 +4,7 @@ import { aboutCards } from "../data/portfolioData";
 
 export default function About() {
   return (
-    <section id="about" className="site-shell py-14 sm:py-20">
+    <section id="about" className="site-shell py-10 sm:py-14">
       <SectionTitle
         kicker="About"
         title="About Me"
@@ -23,27 +23,14 @@ export default function About() {
           </div>
           <div className="space-y-4 p-5 text-[1rem] leading-[1.65] text-brown sm:p-6">
             <p>
-              I am a GRC and Cloud Security Analyst with 3+ years of experience across ITGC,
-              control testing, cloud risk assessments, audit readiness, and security compliance in
-              AWS, Azure, and GCP environments. I currently work as a GRC Analyst at BlackRock,
-              where I triage cloud security posture findings, review network and encryption
-              controls, and support regulatory control testing.
+              GRC and Cloud Security Analyst with 3+ years across ITGC, control testing, cloud
+              risk, and audit readiness in AWS, Azure, and GCP. Currently a GRC Analyst at
+              BlackRock; previously a Cloud Security Analyst at Siemens.
             </p>
             <p>
-              Previously, as a Cloud Security Analyst at Siemens, I maintained ISO 27001
-              documentation, executed ITGC control testing, administered ServiceNow IRM and CMDB
-              activities, and reviewed SAP GRC access and segregation-of-duties conflicts across a
-              global environment.
-            </p>
-            <p>
-              My framework depth spans ISO 27001, NIST CSF, SOC 2, CIS Controls, GDPR, the DPDP
-              Act, CERT-In, and IEC 62443, paired with hands-on cloud IAM governance, CSPM triage,
-              Terraform and Kubernetes security review, and emerging AI/LLM governance work.
-            </p>
-            <p>
-              What differentiates me is the ability to translate technical cloud security findings
-              into audit-ready risk narratives, control deficiencies, and stakeholder-ready
-              reporting across complex, multi-cloud environments.
+              I work across ISO 27001, NIST CSF, SOC 2, and CIS Controls with hands-on CSPM
+              triage, cloud IAM governance, Terraform and Kubernetes review, and AI/LLM governance,
+              turning technical findings into audit-ready risk decisions.
             </p>
           </div>
         </RetroCard>

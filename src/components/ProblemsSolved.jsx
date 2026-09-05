@@ -4,7 +4,7 @@ import { problems } from "../data/portfolioData";
 
 export default function ProblemsSolved() {
   return (
-    <section className="site-shell py-14 sm:py-20">
+    <section className="site-shell py-10 sm:py-14">
       <SectionTitle
         kicker="Service menu"
         title="Cyber Risk Problems I Help Solve"

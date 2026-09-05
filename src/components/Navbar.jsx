@@ -20,7 +20,7 @@ const iconForLink = {
   About: User,
   Skills: Wrench,
   Experience: Briefcase,
-  Projects: ShieldCheck,
+  "Focus Areas": ShieldCheck,
   Contact: Mail
 };
 

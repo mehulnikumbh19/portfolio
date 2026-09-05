@@ -287,9 +287,52 @@ body {
     background-color: var(--orange);
     display: block;
   }
+
+  .ticker {
+    overflow: hidden;
+  }
+
+  .ticker__track {
+    display: flex;
+    width: max-content;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    animation: ticker-scroll 48s linear infinite;
+    will-change: transform;
+  }
+
+  .ticker:hover .ticker__track {
+    animation-play-state: paused;
+  }
+
+  .cursor-blink {
+    animation: cursor-blink 1s steps(2, start) infinite;
+  }
+}
+
+@keyframes ticker-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes cursor-blink {
+  to {
+    visibility: hidden;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .ticker__track {
+    animation: none;
+    width: auto;
+    flex-wrap: wrap;
+  }
+
   *,
   *::before,
   *::after {
