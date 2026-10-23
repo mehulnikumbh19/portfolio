@@ -7,9 +7,6 @@ export default function Footer() {
     <footer className="site-shell pb-8 pt-4">
       <div className="retro-card bg-ink p-4 text-paper sm:p-5">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <p className="pixel-label text-orange">
-            Designed and built for IT Governance, GRC, and IT Risk opportunities.
-          </p>
           <div className="flex items-center gap-2">
             <a
               href={profile.linkedin}
