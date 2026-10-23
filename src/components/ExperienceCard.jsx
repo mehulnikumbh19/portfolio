@@ -2,7 +2,7 @@ import { Briefcase } from "lucide-react";
 import Badge from "./Badge";
 import RetroCard from "./RetroCard";
 
-export default function ExperienceCard({ item, index }) {
+export default function ExperienceCard({ item, index, fullWidth = false }) {
   const tone = index === 1 ? "dark" : index === 2 ? "cream" : "paper";
   const isDark = tone === "dark";
   const isCurrent = /present/i.test(item.dates);
@@ -12,7 +12,7 @@ export default function ExperienceCard({ item, index }) {
       as="li"
       delay={index * 0.06}
       tone={tone}
-      className={`p-0 ${isDark ? "scanlines" : ""}`}
+      className={`p-0 ${isDark ? "scanlines" : ""} ${fullWidth ? "lg:col-span-2" : ""}`}
     >
       <div
         className={`titlebar ${
@@ -49,7 +49,7 @@ export default function ExperienceCard({ item, index }) {
             isDark ? "text-paper/80" : "text-brown"
           }`}
         >
-          {item.location} . {item.type}
+          {[item.location, item.type].filter(Boolean).join(" . ")}
         </p>
 
         <div className="mt-4 flex flex-wrap gap-2">

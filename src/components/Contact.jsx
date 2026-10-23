@@ -40,7 +40,7 @@ export default function Contact() {
       <SectionTitle
         kicker="Sign-off"
         title="Let's build audit-ready security programs."
-        description="Open to Cloud Security, GRC, IT Risk, and Security Compliance opportunities across AWS, Azure, and GCP environments."
+        description="Open to IT Governance, GRC, IT Risk, IT Audit, and Third-Party Risk opportunities."
       />
 
       <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">

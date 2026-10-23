@@ -8,7 +8,7 @@ export default function Metrics() {
       <SectionTitle
         kicker="Stats"
         title="Tallies from the work."
-        description="Counts drawn directly from experience, certifications, and framework coverage."
+        description="Counts drawn directly from resume experience and projects."
       />
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {metrics.map((metric, index) => (

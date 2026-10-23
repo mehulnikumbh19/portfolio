@@ -7,7 +7,9 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import ProblemsSolved from "./components/ProblemsSolved";
 import Experience from "./components/Experience";
+import Projects from "./components/Projects";
 import FrameworkMapping from "./components/FrameworkMapping";
+import Education from "./components/Education";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -24,7 +26,9 @@ export default function App() {
         <Skills />
         <ProblemsSolved />
         <Experience />
+        <Projects />
         <FrameworkMapping />
+        <Education />
         <Contact />
       </main>
       <Footer />

@@ -12,10 +12,10 @@ export default function FrameworkMapping() {
       <SectionTitle
         kicker="References"
         title="Frameworks"
-        description="Eight standards from the resume, each paired with the work it backed."
+        description="Six standards from the resume, each paired with the work it backed."
       />
 
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {frameworks.map((framework, index) => {
           const tone = tonePalette[index % tonePalette.length];
           const isDark = tone === "dark";

@@ -12,7 +12,7 @@ export default function About() {
         <SectionTitle
           kicker="About"
           title="About Me"
-          description="Cloud security governance, risk, and compliance across AWS, Azure, and GCP."
+          description="IT governance, risk, and compliance with a first-line-of-defense focus."
         />
 
         <div className="grid gap-5 lg:grid-cols-2">
@@ -27,14 +27,16 @@ export default function About() {
             </div>
             <div className="space-y-3 p-5 text-[0.97rem] leading-[1.6] text-brown">
               <p>
-                GRC and Cloud Security Analyst with 3+ years across ITGC, control testing, cloud
-                risk, and audit readiness in AWS, Azure, and GCP. Currently a GRC Analyst at
-                BlackRock; previously a Cloud Security Analyst at Siemens.
+                IT Governance and GRC Analyst with an M.S. in Information Systems (Cybersecurity)
+                from CSULB. Most recently a GRC / Cybersecurity Analyst Intern at The Cheesecake
+                Factory; previously a Security Analyst at VESIT and a Security Operations Analyst
+                at Telenetworks Technologies.
               </p>
               <p>
-                I work across ISO 27001, NIST CSF, SOC 2, and CIS Controls with hands-on CSPM
-                triage, cloud IAM governance, Terraform and Kubernetes review, and AI/LLM
-                governance, turning technical findings into audit-ready risk decisions.
+                I run 1LOD ITGC control testing, third-party risk reviews of vendor SOC 2 reports
+                and CUECs, and IAM access reviews across NIST CSF, NIST SP 800-53, ISO 27001, and
+                CIS Controls, turning technical findings into risk registers, remediation plans,
+                and audit-ready evidence.
               </p>
             </div>
           </RetroCard>
