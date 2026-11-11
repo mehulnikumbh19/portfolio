@@ -1,0 +1,33 @@
+import ScrollProgress from "./components/ScrollProgress";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Ticker from "./components/Ticker";
+import Metrics from "./components/Metrics";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import ProblemsSolved from "./components/ProblemsSolved";
+import Projects from "./components/Projects";
+import FrameworkMapping from "./components/FrameworkMapping";
+import Education from "./components/Education";
+import Contact from "./components/Contact";
+
+export default function App() {
+  return (
+    <div className="min-h-screen bg-page text-ink">
+      <ScrollProgress />
+      <Navbar />
+      <main className="pt-32 sm:pt-36">
+        <Hero />
+        <Ticker />
+        <Metrics />
+        <About />
+        <Skills />
+        <ProblemsSolved />
+        <Projects />
+        <FrameworkMapping />
+        <Education />
+        <Contact />
+      </main>
+    </div>
+  );
+}
